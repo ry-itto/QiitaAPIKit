@@ -1,3 +1,2 @@
-struct QiitaAPIKit {
-    var text = "Hello, World!"
+public struct QiitaAPIKit {
 }

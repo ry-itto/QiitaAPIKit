@@ -24,6 +24,7 @@
 		BF2592D1232687C90064F498 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2592D0232687C90064F498 /* Article.swift */; };
 		BF2592D3232688E60064F498 /* ArticleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2592D2232688E60064F498 /* ArticleRequest.swift */; };
 		BF2592D52326AA770064F498 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2592D42326AA770064F498 /* Error.swift */; };
+		BF68DCCB2327FDA400AB8F3E /* URLSession+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68DCCA2327FDA400AB8F3E /* URLSession+Ex.swift */; };
 		OBJ_23 /* QiitaAPIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* QiitaAPIKit.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_41 /* QiitaAPIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* QiitaAPIKitTests.swift */; };
@@ -52,6 +53,7 @@
 		BF2592D0232687C90064F498 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		BF2592D2232688E60064F498 /* ArticleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRequest.swift; sourceTree = "<group>"; };
 		BF2592D42326AA770064F498 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		BF68DCCA2327FDA400AB8F3E /* URLSession+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Ex.swift"; sourceTree = "<group>"; };
 		OBJ_12 /* QiitaAPIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIKitTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				BF2592D2232688E60064F498 /* ArticleRequest.swift */,
 				BF2592D42326AA770064F498 /* Error.swift */,
 				OBJ_9 /* QiitaAPIKit.swift */,
+				BF68DCCA2327FDA400AB8F3E /* URLSession+Ex.swift */,
 			);
 			name = QiitaAPIKit;
 			path = Sources/QiitaAPIKit;
@@ -226,6 +229,7 @@
 				BF2592D52326AA770064F498 /* Error.swift in Sources */,
 				BF2592D1232687C90064F498 /* Article.swift in Sources */,
 				OBJ_23 /* QiitaAPIKit.swift in Sources */,
+				BF68DCCB2327FDA400AB8F3E /* URLSession+Ex.swift in Sources */,
 				BF2592D3232688E60064F498 /* ArticleRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

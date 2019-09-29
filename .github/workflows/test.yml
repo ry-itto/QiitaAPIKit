@@ -1,13 +1,13 @@
 name: test
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   test:
     runs-on: macOS-latest
     strategy:
         matrix:
-          destination: ['platform=iOS Simulator,OS=13.0,name=iPhone 11 Pro']
+          destination: ['platform=iOS Simulator,OS=12.4,name=iPhone XS']
     steps:
     - uses: actions/checkout@v1
     - name: macOS version

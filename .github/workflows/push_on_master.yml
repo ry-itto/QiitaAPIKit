@@ -1,0 +1,22 @@
+name: push_on_master
+
+on: push
+  branches:
+    - master
+
+jobs:
+  test:
+    runs-on: macOS-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=12.4,name=iPhone Xs']
+    steps:
+    - uses: actions/checkout@v1
+    - name: macOS version
+      run: sw_vers
+    - name: Simulators
+      run: xcrun instruments -s
+    - name: Pod install
+      run: bundle && bundle exec pod install
+    - name: xcode test
+      run: xcodebuild test -workspace QiitaAPIKit.xcworkspace -scheme QiitaAPIKit -destination '${{matrix.destination}}'

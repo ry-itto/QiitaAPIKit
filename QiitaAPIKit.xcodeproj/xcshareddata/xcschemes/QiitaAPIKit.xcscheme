@@ -27,6 +27,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "QiitaAPIKit::QiitaAPIKitTests"
+               BuildableName = "QiitaAPIKitTests.xctest"
+               BlueprintName = "QiitaAPIKitTests"
+               ReferencedContainer = "container:QiitaAPIKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -46,6 +56,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "QiitaAPIKit::QiitaAPIKit"
+            BuildableName = "QiitaAPIKit.framework"
+            BlueprintName = "QiitaAPIKit"
+            ReferencedContainer = "container:QiitaAPIKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

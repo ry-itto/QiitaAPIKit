@@ -17,4 +17,4 @@ jobs:
     - name: Pod install
       run: bundle && bundle exec pod install
     - name: xcode test
-      run: xcodebuild test -workspace QiitaAPIKit.xcworkspace -scheme QiitaAPIKit -destination ${{matrix.destination}}
+      run: xcodebuild test -workspace QiitaAPIKit.xcworkspace -scheme QiitaAPIKit -destination '${{matrix.destination}}'

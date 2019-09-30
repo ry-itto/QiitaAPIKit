@@ -11,7 +11,15 @@ import QiitaAPIKit
 
 class ViewController: UITableViewController {
 
+    var items: [Article] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+
+        cell.textLabel?.text = items[indexPath.row].body
     }
 }

@@ -1,0 +1,35 @@
+PODS:
+  - OHHTTPStubs (8.0.0):
+    - OHHTTPStubs/Default (= 8.0.0)
+  - OHHTTPStubs/Core (8.0.0)
+  - OHHTTPStubs/Default (8.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (8.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (8.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (8.0.0)
+  - QiitaAPIKit (0.0.1):
+    - OHHTTPStubs (~> 8.0)
+
+DEPENDENCIES:
+  - QiitaAPIKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - OHHTTPStubs
+
+EXTERNAL SOURCES:
+  QiitaAPIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
+  QiitaAPIKit: 5dac5a99e65965188bc8374c87ce892a92b5e5d0
+
+PODFILE CHECKSUM: a85a32fe3ac4b0dbb565e2788f14672dc409b497
+
+COCOAPODS: 1.8.1

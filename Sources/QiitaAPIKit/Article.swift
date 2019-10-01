@@ -9,21 +9,21 @@ import Foundation
 
 /// Qiita記事モデル
 public struct Article: Decodable {
-    let renderedBody: String
-    let body: String
-    let coediting: Bool
-    let createdAt: Date
-    let group: Group?
-    let id: String
-    let likesCount: Int
-    let isPrivate: Bool
-    let reactionsCount: Int
-    let tags: [Tag]
-    let title: String
-    let updatedAt: Date
-    let url: URL
-    let user: User
-    let pageViewsCount: Int?
+    public let renderedBody: String
+    public let body: String
+    public let coediting: Bool
+    public let createdAt: Date
+    public let group: Group?
+    public let id: String
+    public let likesCount: Int
+    public let isPrivate: Bool
+    public let reactionsCount: Int
+    public let tags: [Tag]
+    public let title: String
+    public let updatedAt: Date
+    public let url: URL
+    public let user: User
+    public let pageViewsCount: Int?
     
     enum CodingKeys: String, CodingKey {
         case renderedBody
@@ -45,12 +45,12 @@ public struct Article: Decodable {
 }
 
 public struct Group: Decodable {
-    let createdAt: Date
-    let id: Int
-    let name: String
-    let isPrivate: Bool
-    let updatedAt: Date
-    let urlName: String
+    public let createdAt: Date
+    public let id: Int
+    public let name: String
+    public let isPrivate: Bool
+    public let updatedAt: Date
+    public let urlName: String
     
     enum CodingKeys: String, CodingKey {
         case createdAt
@@ -63,27 +63,27 @@ public struct Group: Decodable {
 }
 
 public struct Tag: Decodable {
-    let name: String
-    let versions: [String]
+    public let name: String
+    public let versions: [String]
 }
 
 public struct User: Decodable {
-    let description: String?
-    let facebookId: String?
-    let followeesCount: Int
-    let followersCount: Int
-    let githubLoginName: String?
-    let id: String
-    let itemsCount: Int
-    let linkedinId: String?
-    let location: String?
-    let name: String
-    let organization: String?
-    let permanentId: Int
-    let profileImageUrl: URL?
-    let teamOnly: Bool
-    let twitterScreenName: String?
-    let websiteUrlString: String?
+    public let description: String?
+    public let facebookId: String?
+    public let followeesCount: Int
+    public let followersCount: Int
+    public let githubLoginName: String?
+    public let id: String
+    public let itemsCount: Int
+    public let linkedinId: String?
+    public let location: String?
+    public let name: String
+    public let organization: String?
+    public let permanentId: Int
+    public let profileImageUrl: URL?
+    public let teamOnly: Bool
+    public let twitterScreenName: String?
+    public let websiteUrlString: String?
     
     var websiteUrl: URL? {
         guard let string = websiteUrlString,

@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "http://github.com/ry-itto/QiitaAPIKit"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "ry-itto" => "horusu.dqx@gmail.com" }
-  spec.social_media_url   = "https://twitter.com/ryoya_ito"
+  spec.social_media_url   = "https://twitter.com/ry_itto"
   spec.platform     = :ios, "11.0"
   spec.swift_versions = '5.0'
   spec.source       = { :git => "https://github.com/ry-itto/QiitaAPIKit.git", :tag => "#{spec.version}" }

@@ -11,7 +11,7 @@ public extension QiitaAPIKit {
     
     /// QiitaAPI v2 comments API
     /// https://qiita.com/api/v2/docs#get-apiv2itemsitem_idcomments
-    /// 
+    ///
     /// - Parameter id: Article ID
     /// - Parameter completion: Execute when this function completed
     func fetchArticleComments(id: String, completion: @escaping (Result<[ArticleComment], Error>) ->Void) {

@@ -27,6 +27,8 @@
 		BF2592D52326AA770064F498 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2592D42326AA770064F498 /* Error.swift */; };
 		BF7ACBDB2345CF4000A8395A /* ArticleComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */; };
 		BF7ACBDD2345D02900A8395A /* ArticleCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */; };
+		BF7ACBDF2345D29200A8395A /* ArticleCommentsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */; };
+		BF7ACBE12345DC7200A8395A /* GET_article_comments.json in Resources */ = {isa = PBXBuildFile; fileRef = BF7ACBE02345DB9700A8395A /* GET_article_comments.json */; };
 		BFDACAFB233F525600B22C45 /* ArticleRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */; };
 		BFDACB01233F5BB400B22C45 /* GET_items.json in Resources */ = {isa = PBXBuildFile; fileRef = BFDACAFE233F581100B22C45 /* GET_items.json */; };
 		D6BF88CADDC541904BDB1C7F /* Pods_QiitaAPIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644E337B9372A515EE690924 /* Pods_QiitaAPIKitTests.framework */; };
@@ -68,6 +70,8 @@
 		BF2592D42326AA770064F498 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleComment.swift; sourceTree = "<group>"; };
 		BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentRequest.swift; sourceTree = "<group>"; };
+		BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentsRequestTest.swift; sourceTree = "<group>"; };
+		BF7ACBE02345DB9700A8395A /* GET_article_comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_article_comments.json; sourceTree = "<group>"; };
 		BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRequestTest.swift; sourceTree = "<group>"; };
 		BFDACAFE233F581100B22C45 /* GET_items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GET_items.json; sourceTree = "<group>"; };
 		EAF0720F2F8179955A9B586F /* Pods-QiitaAPIKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaAPIKitTests.release.xcconfig"; path = "Target Support Files/Pods-QiitaAPIKitTests/Pods-QiitaAPIKitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		BFDACAFC233F554500B22C45 /* StubResponses */ = {
 			isa = PBXGroup;
 			children = (
+				BF7ACBE02345DB9700A8395A /* GET_article_comments.json */,
 				BFDACAFE233F581100B22C45 /* GET_items.json */,
 			);
 			path = StubResponses;
@@ -154,6 +159,7 @@
 			children = (
 				BFDACAFC233F554500B22C45 /* StubResponses */,
 				BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */,
+				BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */,
 				OBJ_12 /* QiitaAPIKitTests.swift */,
 				OBJ_13 /* XCTestManifests.swift */,
 			);
@@ -304,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7ACBE12345DC7200A8395A /* GET_article_comments.json in Resources */,
 				BFDACB01233F5BB400B22C45 /* GET_items.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				BF7ACBDF2345D29200A8395A /* ArticleCommentsRequestTest.swift in Sources */,
 				OBJ_41 /* QiitaAPIKitTests.swift in Sources */,
 				BFDACAFB233F525600B22C45 /* ArticleRequestTest.swift in Sources */,
 				OBJ_42 /* XCTestManifests.swift in Sources */,

@@ -21,7 +21,16 @@ public extension QiitaAPIKit {
     /// - Parameter sort: sort order
     /// - Parameter completion: completion
     func fetchTags(page: Int = 1, perPage: Int = 20, sort: SortType = .name, completion: @escaping (Result<[Tag], Error>) -> Void) {
-        let components = URLComponents(string: "https://qiita.com/api/v2/tags")!
+        guard (1...100).contains(page), (1...100).contains(perPage) else {
+            completion(.failure(APIError.OutOfRange))
+            return
+        }
+        var components = URLComponents(string: "https://qiita.com/api/v2/tags")!
+        components.queryItems = [
+            URLQueryItem(name: "page", value: "\(page)"),
+            URLQueryItem(name: "perPage", value: "\(perPage)"),
+            URLQueryItem(name: "sort", value: sort.rawValue)
+        ]
 
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601

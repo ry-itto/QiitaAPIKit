@@ -54,4 +54,15 @@ class TagRequestTest: XCTestCase {
 
         wait(for: [exp], timeout: 5.0)
     }
+
+    func test_fetchTags_PageOutOfRange() {
+        apiKit.fetchTags(page: 0) { result in
+            switch result {
+            case .success:
+                XCTFail()
+            case .failure:
+                break
+            }
+        }
+    }
 }

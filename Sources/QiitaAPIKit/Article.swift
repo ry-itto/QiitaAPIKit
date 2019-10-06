@@ -42,6 +42,11 @@ public struct Article: Decodable {
         case user
         case pageViewsCount
     }
+
+    public struct Tag: Decodable {
+        public let name: String
+        public let versions: [String]
+    }
 }
 
 public struct Group: Decodable {
@@ -60,11 +65,6 @@ public struct Group: Decodable {
         case updatedAt
         case urlName
     }
-}
-
-public struct Tag: Decodable {
-    public let name: String
-    public let versions: [String]
 }
 
 public struct User: Decodable {

@@ -29,6 +29,10 @@
 		BF7ACBDD2345D02900A8395A /* ArticleCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */; };
 		BF7ACBDF2345D29200A8395A /* ArticleCommentsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */; };
 		BF7ACBE12345DC7200A8395A /* GET_article_comments.json in Resources */ = {isa = PBXBuildFile; fileRef = BF7ACBE02345DB9700A8395A /* GET_article_comments.json */; };
+		BFD28CED234A35690040604C /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD28CEC234A35690040604C /* Tag.swift */; };
+		BFD28CEF234A369E0040604C /* TagRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD28CEE234A369E0040604C /* TagRequest.swift */; };
+		BFD28CF1234A67E10040604C /* TagRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD28CF0234A67E10040604C /* TagRequestTest.swift */; };
+		BFD28CF3234A693E0040604C /* GET_tags.json in Resources */ = {isa = PBXBuildFile; fileRef = BFD28CF2234A68240040604C /* GET_tags.json */; };
 		BFDACAFB233F525600B22C45 /* ArticleRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */; };
 		BFDACB01233F5BB400B22C45 /* GET_items.json in Resources */ = {isa = PBXBuildFile; fileRef = BFDACAFE233F581100B22C45 /* GET_items.json */; };
 		D6BF88CADDC541904BDB1C7F /* Pods_QiitaAPIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644E337B9372A515EE690924 /* Pods_QiitaAPIKitTests.framework */; };
@@ -72,6 +76,10 @@
 		BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentRequest.swift; sourceTree = "<group>"; };
 		BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentsRequestTest.swift; sourceTree = "<group>"; };
 		BF7ACBE02345DB9700A8395A /* GET_article_comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_article_comments.json; sourceTree = "<group>"; };
+		BFD28CEC234A35690040604C /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		BFD28CEE234A369E0040604C /* TagRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRequest.swift; sourceTree = "<group>"; };
+		BFD28CF0234A67E10040604C /* TagRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagRequestTest.swift; path = Tests/QiitaAPIKitTests/TagRequestTest.swift; sourceTree = SOURCE_ROOT; };
+		BFD28CF2234A68240040604C /* GET_tags.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_tags.json; sourceTree = "<group>"; };
 		BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRequestTest.swift; sourceTree = "<group>"; };
 		BFDACAFE233F581100B22C45 /* GET_items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GET_items.json; sourceTree = "<group>"; };
 		EAF0720F2F8179955A9B586F /* Pods-QiitaAPIKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaAPIKitTests.release.xcconfig"; path = "Target Support Files/Pods-QiitaAPIKitTests/Pods-QiitaAPIKitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 			children = (
 				BF7ACBE02345DB9700A8395A /* GET_article_comments.json */,
 				BFDACAFE233F581100B22C45 /* GET_items.json */,
+				BFD28CF2234A68240040604C /* GET_tags.json */,
 			);
 			path = StubResponses;
 			sourceTree = "<group>";
@@ -160,6 +169,7 @@
 				BFDACAFC233F554500B22C45 /* StubResponses */,
 				BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */,
 				BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */,
+				BFD28CF0234A67E10040604C /* TagRequestTest.swift */,
 				OBJ_12 /* QiitaAPIKitTests.swift */,
 				OBJ_13 /* XCTestManifests.swift */,
 			);
@@ -201,11 +211,13 @@
 			isa = PBXGroup;
 			children = (
 				BF2592D0232687C90064F498 /* Article.swift */,
+				BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */,
+				BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */,
 				BF2592D2232688E60064F498 /* ArticleRequest.swift */,
 				BF2592D42326AA770064F498 /* Error.swift */,
 				OBJ_9 /* QiitaAPIKit.swift */,
-				BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */,
-				BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */,
+				BFD28CEC234A35690040604C /* Tag.swift */,
+				BFD28CEE234A369E0040604C /* TagRequest.swift */,
 			);
 			name = QiitaAPIKit;
 			path = Sources/QiitaAPIKit;
@@ -310,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD28CF3234A693E0040604C /* GET_tags.json in Resources */,
 				BF7ACBE12345DC7200A8395A /* GET_article_comments.json in Resources */,
 				BFDACB01233F5BB400B22C45 /* GET_items.json in Resources */,
 			);
@@ -409,9 +422,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				BFD28CEF234A369E0040604C /* TagRequest.swift in Sources */,
 				BF7ACBDD2345D02900A8395A /* ArticleCommentRequest.swift in Sources */,
 				BF7ACBDB2345CF4000A8395A /* ArticleComment.swift in Sources */,
 				BF2592D52326AA770064F498 /* Error.swift in Sources */,
+				BFD28CED234A35690040604C /* Tag.swift in Sources */,
 				BF2592D1232687C90064F498 /* Article.swift in Sources */,
 				OBJ_23 /* QiitaAPIKit.swift in Sources */,
 				BF2592D3232688E60064F498 /* ArticleRequest.swift in Sources */,
@@ -433,6 +448,7 @@
 				BF7ACBDF2345D29200A8395A /* ArticleCommentsRequestTest.swift in Sources */,
 				OBJ_41 /* QiitaAPIKitTests.swift in Sources */,
 				BFDACAFB233F525600B22C45 /* ArticleRequestTest.swift in Sources */,
+				BFD28CF1234A67E10040604C /* TagRequestTest.swift in Sources */,
 				OBJ_42 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

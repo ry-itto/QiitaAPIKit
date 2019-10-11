@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "QiitaAPIKit"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "A breif tool to use Qiita API (v2)"
   spec.description  = <<-DESC
   A breif tool to use Qiita API (v2) : https://qiita.com/api/v2/docs

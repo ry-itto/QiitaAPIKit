@@ -7,5 +7,5 @@ library for [Qiita API](https://qiita.com/api/v2/docs).
 |End point|HTTP Method|function|
 |--|--|--|
 |`/api/v2/items`|GET|`fetchArticles`|
-|`/api/v2/items/:item_id/likes`|GET|`fetchTags`|
 |`/api/v2/items/:item_id/comments`|GET|`fetchArticleComments`|
+|`/api/v2/tags`|GET|`fetchTags`|

@@ -29,6 +29,7 @@
 		BF7ACBDD2345D02900A8395A /* ArticleCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */; };
 		BF7ACBDF2345D29200A8395A /* ArticleCommentsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */; };
 		BF7ACBE12345DC7200A8395A /* GET_article_comments.json in Resources */ = {isa = PBXBuildFile; fileRef = BF7ACBE02345DB9700A8395A /* GET_article_comments.json */; };
+		BFBABB2623521FBD0086CD25 /* ArticleLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBABB2523521FBD0086CD25 /* ArticleLike.swift */; };
 		BFD28CED234A35690040604C /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD28CEC234A35690040604C /* Tag.swift */; };
 		BFD28CEF234A369E0040604C /* TagRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD28CEE234A369E0040604C /* TagRequest.swift */; };
 		BFD28CF1234A67E10040604C /* TagRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD28CF0234A67E10040604C /* TagRequestTest.swift */; };
@@ -76,6 +77,7 @@
 		BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentRequest.swift; sourceTree = "<group>"; };
 		BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentsRequestTest.swift; sourceTree = "<group>"; };
 		BF7ACBE02345DB9700A8395A /* GET_article_comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_article_comments.json; sourceTree = "<group>"; };
+		BFBABB2523521FBD0086CD25 /* ArticleLike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleLike.swift; sourceTree = "<group>"; };
 		BFD28CEC234A35690040604C /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		BFD28CEE234A369E0040604C /* TagRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRequest.swift; sourceTree = "<group>"; };
 		BFD28CF0234A67E10040604C /* TagRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagRequestTest.swift; path = Tests/QiitaAPIKitTests/TagRequestTest.swift; sourceTree = SOURCE_ROOT; };
@@ -213,6 +215,7 @@
 				BF2592D0232687C90064F498 /* Article.swift */,
 				BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */,
 				BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */,
+				BFBABB2523521FBD0086CD25 /* ArticleLike.swift */,
 				BF2592D2232688E60064F498 /* ArticleRequest.swift */,
 				BF2592D42326AA770064F498 /* Error.swift */,
 				OBJ_9 /* QiitaAPIKit.swift */,
@@ -427,6 +430,7 @@
 				BF7ACBDB2345CF4000A8395A /* ArticleComment.swift in Sources */,
 				BF2592D52326AA770064F498 /* Error.swift in Sources */,
 				BFD28CED234A35690040604C /* Tag.swift in Sources */,
+				BFBABB2623521FBD0086CD25 /* ArticleLike.swift in Sources */,
 				BF2592D1232687C90064F498 /* Article.swift in Sources */,
 				OBJ_23 /* QiitaAPIKit.swift in Sources */,
 				BF2592D3232688E60064F498 /* ArticleRequest.swift in Sources */,

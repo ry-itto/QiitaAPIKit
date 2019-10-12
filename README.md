@@ -8,4 +8,7 @@ library for [Qiita API](https://qiita.com/api/v2/docs).
 |--|--|--|
 |`/api/v2/items`|GET|`fetchArticles`|
 |`/api/v2/items/:item_id/comments`|GET|`fetchArticleComments`|
+|`/api/v2/items/:item_id/likes`|GET|`fetchArticleLikes`|
+|`/api/v2/items/:item_id/stockers`|GET|`fetchArticleStockers`|
 |`/api/v2/tags`|GET|`fetchTags`|
+

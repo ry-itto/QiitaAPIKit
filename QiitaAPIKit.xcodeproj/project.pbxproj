@@ -29,6 +29,10 @@
 		BF7ACBDD2345D02900A8395A /* ArticleCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */; };
 		BF7ACBDF2345D29200A8395A /* ArticleCommentsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */; };
 		BF7ACBE12345DC7200A8395A /* GET_article_comments.json in Resources */ = {isa = PBXBuildFile; fileRef = BF7ACBE02345DB9700A8395A /* GET_article_comments.json */; };
+		BFBABB2623521FBD0086CD25 /* ArticleLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBABB2523521FBD0086CD25 /* ArticleLike.swift */; };
+		BFBABB282352201F0086CD25 /* ArticleLikesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBABB272352201F0086CD25 /* ArticleLikesRequest.swift */; };
+		BFBABB2B235222580086CD25 /* ArticleLikesRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBABB2A235222580086CD25 /* ArticleLikesRequestTest.swift */; };
+		BFBABB2C2352255C0086CD25 /* GET_likes.json in Resources */ = {isa = PBXBuildFile; fileRef = BFBABB29235222440086CD25 /* GET_likes.json */; };
 		BFD28CED234A35690040604C /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD28CEC234A35690040604C /* Tag.swift */; };
 		BFD28CEF234A369E0040604C /* TagRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD28CEE234A369E0040604C /* TagRequest.swift */; };
 		BFD28CF1234A67E10040604C /* TagRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD28CF0234A67E10040604C /* TagRequestTest.swift */; };
@@ -76,6 +80,10 @@
 		BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentRequest.swift; sourceTree = "<group>"; };
 		BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentsRequestTest.swift; sourceTree = "<group>"; };
 		BF7ACBE02345DB9700A8395A /* GET_article_comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_article_comments.json; sourceTree = "<group>"; };
+		BFBABB2523521FBD0086CD25 /* ArticleLike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleLike.swift; sourceTree = "<group>"; };
+		BFBABB272352201F0086CD25 /* ArticleLikesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleLikesRequest.swift; sourceTree = "<group>"; };
+		BFBABB29235222440086CD25 /* GET_likes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_likes.json; sourceTree = "<group>"; };
+		BFBABB2A235222580086CD25 /* ArticleLikesRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleLikesRequestTest.swift; sourceTree = "<group>"; };
 		BFD28CEC234A35690040604C /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		BFD28CEE234A369E0040604C /* TagRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRequest.swift; sourceTree = "<group>"; };
 		BFD28CF0234A67E10040604C /* TagRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagRequestTest.swift; path = Tests/QiitaAPIKitTests/TagRequestTest.swift; sourceTree = SOURCE_ROOT; };
@@ -151,6 +159,7 @@
 				BF7ACBE02345DB9700A8395A /* GET_article_comments.json */,
 				BFDACAFE233F581100B22C45 /* GET_items.json */,
 				BFD28CF2234A68240040604C /* GET_tags.json */,
+				BFBABB29235222440086CD25 /* GET_likes.json */,
 			);
 			path = StubResponses;
 			sourceTree = "<group>";
@@ -169,6 +178,7 @@
 				BFDACAFC233F554500B22C45 /* StubResponses */,
 				BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */,
 				BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */,
+				BFBABB2A235222580086CD25 /* ArticleLikesRequestTest.swift */,
 				BFD28CF0234A67E10040604C /* TagRequestTest.swift */,
 				OBJ_12 /* QiitaAPIKitTests.swift */,
 				OBJ_13 /* XCTestManifests.swift */,
@@ -213,6 +223,8 @@
 				BF2592D0232687C90064F498 /* Article.swift */,
 				BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */,
 				BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */,
+				BFBABB2523521FBD0086CD25 /* ArticleLike.swift */,
+				BFBABB272352201F0086CD25 /* ArticleLikesRequest.swift */,
 				BF2592D2232688E60064F498 /* ArticleRequest.swift */,
 				BF2592D42326AA770064F498 /* Error.swift */,
 				OBJ_9 /* QiitaAPIKit.swift */,
@@ -322,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBABB2C2352255C0086CD25 /* GET_likes.json in Resources */,
 				BFD28CF3234A693E0040604C /* GET_tags.json in Resources */,
 				BF7ACBE12345DC7200A8395A /* GET_article_comments.json in Resources */,
 				BFDACB01233F5BB400B22C45 /* GET_items.json in Resources */,
@@ -423,10 +436,12 @@
 			buildActionMask = 0;
 			files = (
 				BFD28CEF234A369E0040604C /* TagRequest.swift in Sources */,
+				BFBABB282352201F0086CD25 /* ArticleLikesRequest.swift in Sources */,
 				BF7ACBDD2345D02900A8395A /* ArticleCommentRequest.swift in Sources */,
 				BF7ACBDB2345CF4000A8395A /* ArticleComment.swift in Sources */,
 				BF2592D52326AA770064F498 /* Error.swift in Sources */,
 				BFD28CED234A35690040604C /* Tag.swift in Sources */,
+				BFBABB2623521FBD0086CD25 /* ArticleLike.swift in Sources */,
 				BF2592D1232687C90064F498 /* Article.swift in Sources */,
 				OBJ_23 /* QiitaAPIKit.swift in Sources */,
 				BF2592D3232688E60064F498 /* ArticleRequest.swift in Sources */,
@@ -450,6 +465,7 @@
 				BFDACAFB233F525600B22C45 /* ArticleRequestTest.swift in Sources */,
 				BFD28CF1234A67E10040604C /* TagRequestTest.swift in Sources */,
 				OBJ_42 /* XCTestManifests.swift in Sources */,
+				BFBABB2B235222580086CD25 /* ArticleLikesRequestTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

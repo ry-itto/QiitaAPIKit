@@ -17,6 +17,10 @@ public extension QiitaAPIKit {
     /// - Parameter perPage: number of users per page
     /// - Parameter completion: Execute when this function completed
     func fetchArticleStockers(id: String, page: Int = 1, perPage: Int = 20, completion: @escaping (Result<[User], Error>) ->Void) {
+        guard (1...100).contains(page), (1...100).contains(perPage) else {
+            completion(.failure(APIError.OutOfRange))
+            return
+        }
         guard let components = URLComponents(string: "https://qiita.com/api/v2/items/\(id)/stockers") else {
             completion(.failure(APIError.ArticleIDIsNotValid))
             return

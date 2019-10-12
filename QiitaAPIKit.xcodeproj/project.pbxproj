@@ -27,6 +27,8 @@
 		BF2592D52326AA770064F498 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2592D42326AA770064F498 /* Error.swift */; };
 		BF4F3909235240F500661971 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F3908235240F500661971 /* User.swift */; };
 		BF4F390B2352414100661971 /* ArticleStockersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F390A2352414100661971 /* ArticleStockersRequest.swift */; };
+		BF4F390E2352427900661971 /* ArticleStockersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F390D2352427900661971 /* ArticleStockersTest.swift */; };
+		BF4F390F235242FF00661971 /* GET_stockers.json in Resources */ = {isa = PBXBuildFile; fileRef = BF4F390C2352425700661971 /* GET_stockers.json */; };
 		BF7ACBDB2345CF4000A8395A /* ArticleComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */; };
 		BF7ACBDD2345D02900A8395A /* ArticleCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */; };
 		BF7ACBDF2345D29200A8395A /* ArticleCommentsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */; };
@@ -80,6 +82,8 @@
 		BF2592D42326AA770064F498 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		BF4F3908235240F500661971 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF4F390A2352414100661971 /* ArticleStockersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStockersRequest.swift; sourceTree = "<group>"; };
+		BF4F390C2352425700661971 /* GET_stockers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_stockers.json; sourceTree = "<group>"; };
+		BF4F390D2352427900661971 /* ArticleStockersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStockersTest.swift; sourceTree = "<group>"; };
 		BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleComment.swift; sourceTree = "<group>"; };
 		BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentRequest.swift; sourceTree = "<group>"; };
 		BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentsRequestTest.swift; sourceTree = "<group>"; };
@@ -162,8 +166,9 @@
 			children = (
 				BF7ACBE02345DB9700A8395A /* GET_article_comments.json */,
 				BFDACAFE233F581100B22C45 /* GET_items.json */,
-				BFD28CF2234A68240040604C /* GET_tags.json */,
 				BFBABB29235222440086CD25 /* GET_likes.json */,
+				BF4F390C2352425700661971 /* GET_stockers.json */,
+				BFD28CF2234A68240040604C /* GET_tags.json */,
 			);
 			path = StubResponses;
 			sourceTree = "<group>";
@@ -180,11 +185,12 @@
 			isa = PBXGroup;
 			children = (
 				BFDACAFC233F554500B22C45 /* StubResponses */,
-				BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */,
 				BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */,
 				BFBABB2A235222580086CD25 /* ArticleLikesRequestTest.swift */,
-				BFD28CF0234A67E10040604C /* TagRequestTest.swift */,
+				BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */,
+				BF4F390D2352427900661971 /* ArticleStockersTest.swift */,
 				OBJ_12 /* QiitaAPIKitTests.swift */,
+				BFD28CF0234A67E10040604C /* TagRequestTest.swift */,
 				OBJ_13 /* XCTestManifests.swift */,
 			);
 			name = QiitaAPIKitTests;
@@ -340,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4F390F235242FF00661971 /* GET_stockers.json in Resources */,
 				BFBABB2C2352255C0086CD25 /* GET_likes.json in Resources */,
 				BFD28CF3234A693E0040604C /* GET_tags.json in Resources */,
 				BF7ACBE12345DC7200A8395A /* GET_article_comments.json in Resources */,
@@ -468,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				BF4F390E2352427900661971 /* ArticleStockersTest.swift in Sources */,
 				BF7ACBDF2345D29200A8395A /* ArticleCommentsRequestTest.swift in Sources */,
 				OBJ_41 /* QiitaAPIKitTests.swift in Sources */,
 				BFDACAFB233F525600B22C45 /* ArticleRequestTest.swift in Sources */,

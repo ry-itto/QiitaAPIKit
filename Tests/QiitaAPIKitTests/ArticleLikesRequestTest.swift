@@ -11,8 +11,6 @@ import OHHTTPStubs
 
 class ArticleLikesRequestTest: XCTestCase {
 
-    let apiKit = QiitaAPIKit()
-
     let articleID = "c03700e7a56a8bbff93e"
 
     override func tearDown() {
@@ -21,7 +19,7 @@ class ArticleLikesRequestTest: XCTestCase {
 
     func test_fetchArticleLikesAlive() {
         let exp = expectation(description: "Target host is alive")
-        apiKit.fetchArticleLikes(id: articleID) { result in
+        QiitaAPIKit.ArticleLikesRequest(id: articleID, queryItems: nil).request { result in
             switch result {
             case .success:
                 exp.fulfill()
@@ -45,7 +43,7 @@ class ArticleLikesRequestTest: XCTestCase {
         }
 
         let exp = expectation(description: "Success to decode")
-        apiKit.fetchArticleLikes(id: articleID) { result in
+        QiitaAPIKit.ArticleLikesRequest(id: articleID, queryItems: nil).request { result in
             switch result {
             case .success(let response):
                 XCTAssert(response.count == 1)

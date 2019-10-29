@@ -20,7 +20,7 @@ final class ArticleRequestTest: XCTestCase {
 
     func test_fetchArticlesAlive() {
         let exp = expectation(description: "Target host is alive")
-        QiitaAPIKit.ArticleRequest().request { result in
+        QiitaAPIKit.ArticleRequest(requestQueryItem: Article.Request(query: "alive?")).request { result in
             switch result {
             case .success:
                 exp.fulfill()
@@ -36,7 +36,7 @@ final class ArticleRequestTest: XCTestCase {
 
     func test_fetchArticles_DecodeSuccess() {
         let exp = expectation(description: "Success to decode")
-        QiitaAPIKit.ArticleRequest().request { result in
+        QiitaAPIKit.ArticleRequest(requestQueryItem: Article.Request(query: "decodeSuccess")).request { result in
             switch result {
             case .success(let response):
                 XCTAssert(response.count == 1)

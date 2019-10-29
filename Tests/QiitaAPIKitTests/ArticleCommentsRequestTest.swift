@@ -19,7 +19,7 @@ final class ArticleCommentsRequestTest: XCTestCase {
 
     func test_fetchArticleCommentsAlive() {
         let exp = expectation(description: "Target host is alive")
-        QiitaAPIKit.ArticleCommentRequest(id: articleID, queryItems: nil).request { result in
+        QiitaAPIKit.ArticleCommentRequest(id: articleID).request { result in
             switch result {
             case .success:
                 exp.fulfill()
@@ -43,7 +43,7 @@ final class ArticleCommentsRequestTest: XCTestCase {
         }
 
         let exp = expectation(description: "Success to decode")
-        QiitaAPIKit.ArticleCommentRequest(id: articleID, queryItems: nil).request { result in
+        QiitaAPIKit.ArticleCommentRequest(id: articleID).request { result in
             switch result {
             case .success(let response):
                 XCTAssert(response.count == 1)

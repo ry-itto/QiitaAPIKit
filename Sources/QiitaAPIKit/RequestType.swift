@@ -7,11 +7,16 @@
 
 import Foundation
 
+protocol RequestQueryItem {
+    func queryItems() -> [URLQueryItem]
+}
+
 protocol RequestType {
+    associatedtype Request: RequestQueryItem
     associatedtype Response: Decodable
 
     var requestURLString: String { get }
-    var queryItems: [URLQueryItem]? { get }
+    var requestQueryItem: Request { get }
 
     func request(completion: @escaping (Result<Response, Error>) -> Void)
 }
@@ -19,7 +24,7 @@ protocol RequestType {
 extension RequestType {
     func request(completion: @escaping (Result<Response, Error>) -> Void) {
         var components = URLComponents(string: requestURLString)!
-        components.queryItems = queryItems ?? []
+        components.queryItems = requestQueryItem.queryItems()
 
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601

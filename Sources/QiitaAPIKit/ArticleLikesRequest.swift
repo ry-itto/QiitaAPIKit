@@ -12,13 +12,14 @@ public extension QiitaAPIKit {
     /// QiitaAPI v2 likes API
     /// https://qiita.com/api/v2/docs#get-apiv2itemsitem_idlikess
     struct ArticleLikesRequest: RequestType {
-        typealias Response = [ArticleLike]
+        typealias Request = ArticleLike.Request
+        typealias Response = [ArticleLike.Response]
 
         let id: String
 
         var requestURLString: String {
             return "https://qiita.com/api/v2/items/\(id)/likes"
         }
-        var queryItems: [URLQueryItem]? = nil
+        var requestQueryItem: ArticleLike.Request = ArticleLike.Request()
     }
 }

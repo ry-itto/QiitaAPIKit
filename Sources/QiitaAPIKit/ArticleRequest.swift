@@ -11,11 +11,12 @@ public extension QiitaAPIKit {
     /// QiitaAPI v2 items API
     /// https://qiita.com/api/v2/docs#get-apiv2items
     struct ArticleRequest: RequestType {
-        typealias Response = [Article]
+        typealias Request = Article.Request
+        typealias Response = [Article.Response]
 
         var requestURLString: String {
             return "https://qiita.com/api/v2/items"
         }
-        var queryItems: [URLQueryItem]?
+        var requestQueryItem: Article.Request
     }
 }

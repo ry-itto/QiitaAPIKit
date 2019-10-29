@@ -26,6 +26,7 @@
 		BF2592D3232688E60064F498 /* ArticleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2592D2232688E60064F498 /* ArticleRequest.swift */; };
 		BF2592D52326AA770064F498 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2592D42326AA770064F498 /* Error.swift */; };
 		BF4418DF23680B410084C71F /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4418DE23680B410084C71F /* RequestType.swift */; };
+		BF4418E1236831550084C71F /* ArticleStockers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4418E0236831550084C71F /* ArticleStockers.swift */; };
 		BF4F3909235240F500661971 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F3908235240F500661971 /* User.swift */; };
 		BF4F390B2352414100661971 /* ArticleStockersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F390A2352414100661971 /* ArticleStockersRequest.swift */; };
 		BF4F390E2352427900661971 /* ArticleStockersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F390D2352427900661971 /* ArticleStockersTest.swift */; };
@@ -82,6 +83,7 @@
 		BF2592D2232688E60064F498 /* ArticleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRequest.swift; sourceTree = "<group>"; };
 		BF2592D42326AA770064F498 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		BF4418DE23680B410084C71F /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		BF4418E0236831550084C71F /* ArticleStockers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStockers.swift; sourceTree = "<group>"; };
 		BF4F3908235240F500661971 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF4F390A2352414100661971 /* ArticleStockersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStockersRequest.swift; sourceTree = "<group>"; };
 		BF4F390C2352425700661971 /* GET_stockers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_stockers.json; sourceTree = "<group>"; };
@@ -233,11 +235,12 @@
 			isa = PBXGroup;
 			children = (
 				BF2592D0232687C90064F498 /* Article.swift */,
+				BF2592D2232688E60064F498 /* ArticleRequest.swift */,
 				BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */,
 				BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */,
 				BFBABB2523521FBD0086CD25 /* ArticleLike.swift */,
 				BFBABB272352201F0086CD25 /* ArticleLikesRequest.swift */,
-				BF2592D2232688E60064F498 /* ArticleRequest.swift */,
+				BF4418E0236831550084C71F /* ArticleStockers.swift */,
 				BF4F390A2352414100661971 /* ArticleStockersRequest.swift */,
 				BF2592D42326AA770064F498 /* Error.swift */,
 				OBJ_9 /* QiitaAPIKit.swift */,
@@ -459,6 +462,7 @@
 				BF2592D52326AA770064F498 /* Error.swift in Sources */,
 				BFD28CED234A35690040604C /* Tag.swift in Sources */,
 				BFBABB2623521FBD0086CD25 /* ArticleLike.swift in Sources */,
+				BF4418E1236831550084C71F /* ArticleStockers.swift in Sources */,
 				BF2592D1232687C90064F498 /* Article.swift in Sources */,
 				OBJ_23 /* QiitaAPIKit.swift in Sources */,
 				BF2592D3232688E60064F498 /* ArticleRequest.swift in Sources */,

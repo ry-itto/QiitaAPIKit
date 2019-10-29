@@ -7,11 +7,19 @@
 
 import Foundation
 
-public struct ArticleComment: Decodable {
-    let body: String
-    let createdAt: Date
-    let id: String
-    let renderedBody: String
-    let updatedAt: Date
-    let user: User
+public enum ArticleComment {
+    public struct Request: RequestQueryItem {
+        func queryItems() -> [URLQueryItem] {
+            return []
+        }
+    }
+
+    public struct Response: Decodable {
+        let body: String
+        let createdAt: Date
+        let id: String
+        let renderedBody: String
+        let updatedAt: Date
+        let user: User
+    }
 }

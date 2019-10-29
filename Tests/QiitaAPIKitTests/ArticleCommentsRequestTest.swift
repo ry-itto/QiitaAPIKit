@@ -11,7 +11,6 @@ import OHHTTPStubs
 
 final class ArticleCommentsRequestTest: XCTestCase {
 
-    let apiKit = QiitaAPIKit()
     let articleID = "c03700e7a56a8bbff93e"
 
     override func tearDown() {
@@ -20,12 +19,12 @@ final class ArticleCommentsRequestTest: XCTestCase {
 
     func test_fetchArticleCommentsAlive() {
         let exp = expectation(description: "Target host is alive")
-        apiKit.fetchArticleComments(id: articleID) { result in
+        QiitaAPIKit.ArticleCommentRequest(id: articleID).request { result in
             switch result {
             case .success:
                 exp.fulfill()
-            case .failure:
-                break
+            case .failure(let e):
+                XCTFail(e.localizedDescription)
             }
         }
 
@@ -44,7 +43,7 @@ final class ArticleCommentsRequestTest: XCTestCase {
         }
 
         let exp = expectation(description: "Success to decode")
-        apiKit.fetchArticleComments(id: articleID) { result in
+        QiitaAPIKit.ArticleCommentRequest(id: articleID).request { result in
             switch result {
             case .success(let response):
                 XCTAssert(response.count == 1)

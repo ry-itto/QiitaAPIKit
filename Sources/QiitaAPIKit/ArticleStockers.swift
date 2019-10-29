@@ -8,7 +8,7 @@
 import Foundation
 
 public enum ArticleStockers {
-    struct Request: RequestQueryItem {
+    public struct Request: RequestQueryItem {
         func queryItems() -> [URLQueryItem] {
             return []
         }

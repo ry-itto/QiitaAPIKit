@@ -9,14 +9,14 @@ import Foundation
 
 public enum Tag {
     public struct Request: RequestQueryItem {
-        enum SortType: String {
+        public enum SortType: String {
             case count
             case name
         }
 
-        var page: Int = 1
-        var perPage: Int = 20
-        var sort: SortType = .count
+        public var page: Int = 1
+        public var perPage: Int = 20
+        public var sort: SortType = .count
 
         func queryItems() -> [URLQueryItem] {
             return [

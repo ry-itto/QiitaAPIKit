@@ -11,8 +11,6 @@ import OHHTTPStubs
 
 final class ArticleStockersTest: XCTestCase {
 
-    let apiKit = QiitaAPIKit()
-
     let articleID = "c03700e7a56a8bbff93e"
 
     override func tearDown() {
@@ -21,7 +19,7 @@ final class ArticleStockersTest: XCTestCase {
 
     func test_fetchArticleLikesAlive() {
         let exp = expectation(description: "Target host is alive")
-        apiKit.fetchArticleStockers(id: articleID) { result in
+        QiitaAPIKit.ArticleStockersRequest(id: articleID, queryItems: nil).request { result in
             switch result {
             case .success:
                 exp.fulfill()
@@ -45,7 +43,7 @@ final class ArticleStockersTest: XCTestCase {
         }
 
         let exp = expectation(description: "Success to decode")
-        apiKit.fetchArticleStockers(id: articleID) { result in
+        QiitaAPIKit.ArticleStockersRequest(id: articleID, queryItems: nil).request { result in
             switch result {
             case .success(let response):
                 XCTAssert(response.count == 1)
@@ -68,7 +66,7 @@ final class ArticleStockersTest: XCTestCase {
         }
 
         let exp = expectation(description: "Success to decode")
-        apiKit.fetchArticleStockers(id: articleID, page: 0) { result in
+        QiitaAPIKit.ArticleStockersRequest(id: articleID, queryItems: nil).request { result in
             switch result {
             case .success:
                 XCTFail()
@@ -76,6 +74,8 @@ final class ArticleStockersTest: XCTestCase {
                 exp.fulfill()
             }
         }
+
+        XCTFail("query parameters")
 
         wait(for: [exp], timeout: 5.0)
     }

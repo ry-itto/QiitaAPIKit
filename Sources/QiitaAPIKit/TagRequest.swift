@@ -18,6 +18,8 @@ public extension QiitaAPIKit {
         var requestURLString: String {
             return "https://qiita.com/api/v2/tags"
         }
-        var requestQueryItem: Tag.Request = Tag.Request()
+        var requestQueryItem: Tag.Request {
+            return Tag.Request()
+        }
     }
 }

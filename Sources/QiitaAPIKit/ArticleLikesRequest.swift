@@ -20,6 +20,8 @@ public extension QiitaAPIKit {
         var requestURLString: String {
             return "https://qiita.com/api/v2/items/\(id)/likes"
         }
-        var requestQueryItem: ArticleLike.Request = ArticleLike.Request()
+        var requestQueryItem: ArticleLike.Request {
+            return ArticleLike.Request()
+        }
     }
 }

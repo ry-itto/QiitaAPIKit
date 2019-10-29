@@ -20,6 +20,8 @@ public extension QiitaAPIKit {
         var requestURLString: String {
             return "https://qiita.com/api/v2/items/\(id)/comments"
         }
-        var requestQueryItem: ArticleComment.Request = ArticleComment.Request()
+        var requestQueryItem: ArticleComment.Request {
+            return ArticleComment.Request()
+        }
     }
 }

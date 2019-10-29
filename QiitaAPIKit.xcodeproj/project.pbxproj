@@ -189,9 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				BFDACAFC233F554500B22C45 /* StubResponses */,
+				BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */,
 				BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */,
 				BFBABB2A235222580086CD25 /* ArticleLikesRequestTest.swift */,
-				BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */,
 				BF4F390D2352427900661971 /* ArticleStockersTest.swift */,
 				OBJ_12 /* QiitaAPIKitTests.swift */,
 				BFD28CF0234A67E10040604C /* TagRequestTest.swift */,

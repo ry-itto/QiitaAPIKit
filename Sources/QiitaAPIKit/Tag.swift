@@ -14,9 +14,9 @@ public enum Tag {
             case name
         }
 
-        let page: Int = 1
-        let perPage: Int = 20
-        let sort: SortType = .count
+        var page: Int = 1
+        var perPage: Int = 20
+        var sort: SortType = .count
 
         func queryItems() -> [URLQueryItem] {
             return [

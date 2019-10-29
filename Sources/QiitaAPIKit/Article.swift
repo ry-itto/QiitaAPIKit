@@ -10,8 +10,8 @@ import Foundation
 /// Qiita記事モデル
 public enum Article {
     public struct Request: RequestQueryItem {
-        let page: Int = 1
-        let perPage: Int = 20
+        var page: Int = 1
+        var perPage: Int = 20
         let query: String
 
         func queryItems() -> [URLQueryItem] {

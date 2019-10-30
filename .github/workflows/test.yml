@@ -3,7 +3,24 @@ name: test
 on: [pull_request]
 
 jobs:
-  test:
+  test_xcode10.3:
+    runs-on: macOS-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=12.4,name=iPhone Xs']
+    steps:
+    - uses: actions/checkout@v1
+    - name: macOS version
+      run: sw_vers
+    - name: Simulators
+      run: xcrun instruments -s
+    - name: Pod install
+      run: bundle && bundle exec pod install
+    - name: xcode test
+      run: xcodebuild test -workspace QiitaAPIKit.xcworkspace -scheme QiitaAPIKit -destination '${{matrix.destination}}'
+  test_xcode11.0:
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_11.app
     runs-on: macOS-latest
     strategy:
         matrix:

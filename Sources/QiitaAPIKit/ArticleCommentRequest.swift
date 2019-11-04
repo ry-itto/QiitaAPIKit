@@ -12,16 +12,20 @@ public extension QiitaAPIKit {
     /// QiitaAPI v2 comments API
     /// https://qiita.com/api/v2/docs#get-apiv2itemsitem_idcomments
     struct ArticleCommentRequest: RequestType {
-        typealias Request = ArticleComment.Request
-        typealias Response = [ArticleComment.Response]
+        public typealias Request = ArticleComment.Request
+        public typealias Response = [ArticleComment.Response]
 
         let id: String
 
-        var requestURLString: String {
+        public var requestURLString: String {
             return "https://qiita.com/api/v2/items/\(id)/comments"
         }
-        var requestQueryItem: ArticleComment.Request {
+        public var requestQueryItem: ArticleComment.Request {
             return ArticleComment.Request()
+        }
+
+        public init(id: String) {
+            self.id = id
         }
     }
 }

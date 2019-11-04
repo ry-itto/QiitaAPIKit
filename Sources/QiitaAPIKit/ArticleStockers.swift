@@ -9,10 +9,10 @@ import Foundation
 
 public enum ArticleStockers {
     public struct Request: RequestQueryItem {
-        func queryItems() -> [URLQueryItem] {
+        public func queryItems() -> [URLQueryItem] {
             return []
         }
     }
 
-    typealias Response = User
+    public typealias Response = User
 }

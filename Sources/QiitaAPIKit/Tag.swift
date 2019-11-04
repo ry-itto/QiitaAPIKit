@@ -14,11 +14,17 @@ public enum Tag {
             case name
         }
 
-        public var page: Int = 1
-        public var perPage: Int = 20
-        public var sort: SortType = .count
+        public var page: Int
+        public var perPage: Int
+        public var sort: SortType
 
-        func queryItems() -> [URLQueryItem] {
+        public init(page: Int = 1, perPage: Int = 20, sort: SortType = .count) {
+            self.page = page
+            self.perPage = perPage
+            self.sort = sort
+        }
+
+        public func queryItems() -> [URLQueryItem] {
             return [
                 URLQueryItem(name: "page", value: "\(page)"),
                 URLQueryItem(name: "perPage", value: "\(perPage)"),

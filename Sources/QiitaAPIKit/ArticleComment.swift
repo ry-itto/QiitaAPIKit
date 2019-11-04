@@ -9,7 +9,7 @@ import Foundation
 
 public enum ArticleComment {
     public struct Request: RequestQueryItem {
-        func queryItems() -> [URLQueryItem] {
+        public func queryItems() -> [URLQueryItem] {
             return []
         }
     }

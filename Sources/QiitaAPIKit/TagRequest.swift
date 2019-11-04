@@ -12,13 +12,13 @@ public extension QiitaAPIKit {
     /// Qiita API v2 tags API
     /// document: https://qiita.com/api/v2/docs#get-apiv2tags
     struct TagRequest: RequestType {
-        typealias Request = Tag.Request
-        typealias Response = [Tag.Response]
+        public typealias Request = Tag.Request
+        public typealias Response = [Tag.Response]
 
-        var requestURLString: String {
+        public var requestURLString: String {
             return "https://qiita.com/api/v2/tags"
         }
-        var requestQueryItem: Tag.Request {
+        public var requestQueryItem: Tag.Request {
             return Tag.Request()
         }
     }

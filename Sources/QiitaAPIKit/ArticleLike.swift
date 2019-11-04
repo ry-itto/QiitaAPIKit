@@ -9,7 +9,7 @@ import Foundation
 
 public enum ArticleLike {
     public struct Request: RequestQueryItem {
-        func queryItems() -> [URLQueryItem] {
+        public func queryItems() -> [URLQueryItem] {
             return []
         }
     }

@@ -12,16 +12,20 @@ public extension QiitaAPIKit {
     /// QiitaAPI v2 stockers API
     /// https://qiita.com/api/v2/docs#get-apiv2itemsitem_idstockers
     struct ArticleStockersRequest: RequestType {
-        typealias Request = ArticleStockers.Request
-        typealias Response = [ArticleStockers.Response]
+        public typealias Request = ArticleStockers.Request
+        public typealias Response = [ArticleStockers.Response]
 
         let id: String
 
-        var requestURLString: String {
+        public var requestURLString: String {
             return "https://qiita.com/api/v2/items/\(id)/stockers"
         }
-        var requestQueryItem: ArticleStockers.Request {
+        public var requestQueryItem: ArticleStockers.Request {
             return ArticleStockers.Request()
+        }
+
+        public init(id: String) {
+            self.id = id
         }
     }
 }

@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol RequestQueryItem {
+public protocol RequestQueryItem {
     func queryItems() -> [URLQueryItem]
 }
 
-protocol RequestType {
+public protocol RequestType {
     associatedtype Request: RequestQueryItem
     associatedtype Response: Decodable
 
@@ -21,7 +21,7 @@ protocol RequestType {
     func request(completion: @escaping (Result<Response, Error>) -> Void)
 }
 
-extension RequestType {
+public extension RequestType {
     func request(completion: @escaping (Result<Response, Error>) -> Void) {
         var components = URLComponents(string: requestURLString)!
         components.queryItems = requestQueryItem.queryItems()

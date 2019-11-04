@@ -55,14 +55,14 @@ class TagRequestTest: XCTestCase {
         wait(for: [exp], timeout: 5.0)
     }
 
-//    func test_fetchTags_PageOutOfRange() {
-//        QiitaAPIKit.TagRequest().request(page: 0) { result in
-//            switch result {
-//            case .success:
-//                XCTFail()
-//            case .failure:
-//                break
-//            }
-//        }
-//    }
+    func test_fetchTags_PageOutOfRange() {
+        QiitaAPIKit.TagRequest(requestQueryItem: .init(page: 0)).request { result in
+            switch result {
+            case .success:
+                XCTFail()
+            case .failure:
+                break
+            }
+        }
+    }
 }

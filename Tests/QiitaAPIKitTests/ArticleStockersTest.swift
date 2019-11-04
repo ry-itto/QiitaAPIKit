@@ -56,27 +56,25 @@ final class ArticleStockersTest: XCTestCase {
         wait(for: [exp], timeout: 5.0)
     }
 
-//    func test_fetchArticleTags_OutofRange() {
-//
-//        guard let stubPath = OHPathForFile("GET_stockers.json", type(of: self)) else {
-//            fatalError("Can't find 'GET_stockers.json in this bundle'")
-//        }
-//        stub(condition: isHost("qiita.com") && isPath("/api/v2/items/\(articleID)/stockers")) { _ in
-//            return fixture(filePath: stubPath, headers: nil)
-//        }
-//
-//        let exp = expectation(description: "Success to decode")
-//        QiitaAPIKit.ArticleStockersRequest(id: articleID, queryItems: nil).request { result in
-//            switch result {
-//            case .success:
-//                XCTFail()
-//            case .failure:
-//                exp.fulfill()
-//            }
-//        }
-//
-//        XCTFail("query parameters")
-//
-//        wait(for: [exp], timeout: 5.0)
-//    }
+    func test_fetchArticleTags_OutofRange() {
+
+        guard let stubPath = OHPathForFile("GET_stockers.json", type(of: self)) else {
+            fatalError("Can't find 'GET_stockers.json in this bundle'")
+        }
+        stub(condition: isHost("qiita.com") && isPath("/api/v2/items/\(articleID)/stockers")) { _ in
+            return fixture(filePath: stubPath, headers: nil)
+        }
+
+        let exp = expectation(description: "Success to decode")
+        QiitaAPIKit.ArticleStockersRequest(id: articleID,requestQueryItems: .init(page: 0)).request { result in
+            switch result {
+            case .success:
+                XCTFail()
+            case .failure:
+                exp.fulfill()
+            }
+        }
+
+        wait(for: [exp], timeout: 5.0)
+    }
 }

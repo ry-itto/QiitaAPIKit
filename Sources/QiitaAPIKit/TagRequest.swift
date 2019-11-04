@@ -8,55 +8,20 @@
 import Foundation
 
 public extension QiitaAPIKit {
-    enum SortType: String {
-        case count
-        case name
-    }
 
     /// Qiita API v2 tags API
     /// document: https://qiita.com/api/v2/docs#get-apiv2tags
-    /// 
-    /// - Parameter page: page
-    /// - Parameter perPage: number of tags per page
-    /// - Parameter sort: sort order
-    /// - Parameter completion: completion
-    func fetchTags(page: Int = 1, perPage: Int = 20, sort: SortType = .name, completion: @escaping (Result<[Tag], Error>) -> Void) {
-        guard (1...100).contains(page), (1...100).contains(perPage) else {
-            completion(.failure(APIError.OutOfRange))
-            return
+    struct TagRequest: RequestType {
+        public typealias Request = Tag.Request
+        public typealias Response = [Tag.Response]
+
+        public var requestURLString: String {
+            return "https://qiita.com/api/v2/tags"
         }
-        var components = URLComponents(string: "https://qiita.com/api/v2/tags")!
-        components.queryItems = [
-            URLQueryItem(name: "page", value: "\(page)"),
-            URLQueryItem(name: "perPage", value: "\(perPage)"),
-            URLQueryItem(name: "sort", value: sort.rawValue)
-        ]
+        public var requestQueryItem: Tag.Request
 
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-
-        var request = URLRequest(url: components.url!)
-        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
-
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            guard let data = data else {
-                completion(.failure(APIError.DataIsNotFetched))
-                return
-            }
-            do {
-                let tags = try decoder.decode([Tag].self, from: data)
-                completion(.success(tags))
-            } catch let e {
-                completion(.failure(e))
-            }
+        public init(requestQueryItem: Request = Request()) {
+            self.requestQueryItem = requestQueryItem
         }
-
-        task.resume()
     }
 }

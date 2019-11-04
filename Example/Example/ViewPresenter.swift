@@ -10,14 +10,14 @@ import QiitaAPIKit
 
 class ViewPresenter {
 
-    private(set) var items: [Article] = []
+    private(set) var items: [Article.Response] = []
 
     weak var viewController: ViewProtocol?
 
     init(_ viewController: ViewProtocol) {
         self.viewController = viewController
 
-        QiitaAPIKit().fetchArticles(query: "iOS") { [weak self] result in
+        QiitaAPIKit.ArticleRequest(requestQueryItem: .init(query: "ios")).request { [weak self] result in
             switch result {
             case .success(let items):
                 self?.items = items

@@ -7,7 +7,19 @@
 
 import Foundation
 
-public struct ArticleLike: Decodable {
-    public let createdAt: Date
-    public let user: User
+public enum ArticleLike {
+    public struct Request: RequestQueryItem {
+        public func isValidParameters() -> Bool {
+            return true
+        }
+
+        public func queryItems() -> [URLQueryItem] {
+            return []
+        }
+    }
+
+    public struct Response: Decodable {
+        public let createdAt: Date
+        public let user: User
+    }
 }

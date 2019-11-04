@@ -4,11 +4,11 @@
 library for [Qiita API](https://qiita.com/api/v2/docs).
 
 ## Supported APIs
-|End point|HTTP Method|function|
+|End point|HTTP Method|struct|
 |--|--|--|
-|`/api/v2/items`|GET|`fetchArticles`|
-|`/api/v2/items/:item_id/comments`|GET|`fetchArticleComments`|
-|`/api/v2/items/:item_id/likes`|GET|`fetchArticleLikes`|
-|`/api/v2/items/:item_id/stockers`|GET|`fetchArticleStockers`|
-|`/api/v2/tags`|GET|`fetchTags`|
+|`/api/v2/items`|GET|`ArticleRequest`|
+|`/api/v2/items/:item_id/comments`|GET|`ArticleCommentRequest`|
+|`/api/v2/items/:item_id/likes`|GET|`ArticleLikesRequest`|
+|`/api/v2/items/:item_id/stockers`|GET|`ArticleStockersRequest`|
+|`/api/v2/tags`|GET|`TagRequest`|
 

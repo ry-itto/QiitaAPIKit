@@ -11,4 +11,5 @@ enum APIError: Error {
     case DataIsNotFetched
     case ArticleIDIsNotValid
     case OutOfRange
+    case InvalidRequestParameter
 }

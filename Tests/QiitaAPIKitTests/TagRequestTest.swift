@@ -19,7 +19,7 @@ class TagRequestTest: XCTestCase {
 
     func test_fetchTagsAlive() {
         let exp = expectation(description: "Target host is alive")
-        apiKit.fetchTags { result in
+        QiitaAPIKit.TagRequest().request { result in
             switch result {
             case .success:
                 exp.fulfill()
@@ -42,7 +42,7 @@ class TagRequestTest: XCTestCase {
         }
 
         let exp = expectation(description: "Success to decode")
-        apiKit.fetchTags { result in
+        QiitaAPIKit.TagRequest().request { result in
             switch result {
             case .success(let tags):
                 XCTAssert(tags.count == 1)
@@ -56,7 +56,7 @@ class TagRequestTest: XCTestCase {
     }
 
     func test_fetchTags_PageOutOfRange() {
-        apiKit.fetchTags(page: 0) { result in
+        QiitaAPIKit.TagRequest(requestQueryItem: .init(page: 0)).request { result in
             switch result {
             case .success:
                 XCTFail()

@@ -20,12 +20,11 @@ public extension QiitaAPIKit {
         public var requestURLString: String {
             return "https://qiita.com/api/v2/items/\(id)/stockers"
         }
-        public var requestQueryItem: ArticleStockers.Request {
-            return ArticleStockers.Request()
-        }
+        public var requestQueryItem: ArticleStockers.Request
 
-        public init(id: String) {
+        public init(id: String, requestQueryItems: Request = Request()) {
             self.id = id
+            self.requestQueryItem = requestQueryItems
         }
     }
 }

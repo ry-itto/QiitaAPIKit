@@ -8,6 +8,7 @@
 import Foundation
 
 public protocol RequestQueryItem {
+    func isValidParameters() -> Bool
     func queryItems() -> [URLQueryItem]
 }
 
@@ -23,6 +24,11 @@ public protocol RequestType {
 
 public extension RequestType {
     func request(completion: @escaping (Result<Response, Error>) -> Void) {
+        guard requestQueryItem.isValidParameters() else {
+            completion(.failure(APIError.InvalidRequestParameter))
+            return
+        }
+
         var components = URLComponents(string: requestURLString)!
         components.queryItems = requestQueryItem.queryItems()
 

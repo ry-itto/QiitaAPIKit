@@ -24,6 +24,11 @@ public enum Tag {
             self.sort = sort
         }
 
+        public func isValidParameters() -> Bool {
+            return (1...100).contains(page)
+                && (1...100).contains(perPage)
+        }
+
         public func queryItems() -> [URLQueryItem] {
             return [
                 URLQueryItem(name: "page", value: "\(page)"),

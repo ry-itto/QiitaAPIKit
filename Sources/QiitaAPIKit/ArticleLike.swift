@@ -9,6 +9,10 @@ import Foundation
 
 public enum ArticleLike {
     public struct Request: RequestQueryItem {
+        public func isValidParameters() -> Bool {
+            return true
+        }
+
         public func queryItems() -> [URLQueryItem] {
             return []
         }

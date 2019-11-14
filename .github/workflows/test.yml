@@ -12,6 +12,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: macOS version
       run: sw_vers
+    - name: List Xcode
+      run: ls /Applications/Xcode*
     - name: Simulators
       run: xcrun instruments -s
     - name: Pod install
@@ -29,6 +31,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: macOS version
       run: sw_vers
+    - name: List Xcode
+      run: ls /Applications/Xcode*
     - name: Simulators
       run: xcrun instruments -s
     - name: Pod install

@@ -20,6 +20,7 @@
 /* Begin PBXFileReference section */
 		1876EA0EDC9E0878182F9FB4 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		BF0828D52343147D0079F5CA /* ViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = "<group>"; };
+		BF53D8EA237A710100BC30F2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BFDACB2F2341E60D00B22C45 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDACB322341E60D00B22C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDACB342341E60D00B22C45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		D1DE7A77F246E5CEFE71201A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF53D8EA237A710100BC30F2 /* WebKit.framework */,
 				E1AB17903653250F89B363C5 /* Pods_Example.framework */,
 			);
 			name = Frameworks;

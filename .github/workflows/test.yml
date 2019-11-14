@@ -21,9 +21,9 @@ jobs:
     - name: xcode test
       run: xcodebuild test -workspace QiitaAPIKit.xcworkspace -scheme QiitaAPIKit -destination '${{matrix.destination}}'
   test_xcode10_3:
+    runs-on: macOS-10.14
     env:
       DEVELOPER_DIR: /Applications/Xcode_10.3.app
-    runs-on: macOS-10.14
     strategy:
         matrix:
           destination: ['platform=iOS Simulator,OS=12.4,name=iPhone Xs']

@@ -27,6 +27,8 @@
 		BF2592D52326AA770064F498 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2592D42326AA770064F498 /* Error.swift */; };
 		BF4418DF23680B410084C71F /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4418DE23680B410084C71F /* RequestType.swift */; };
 		BF4418E1236831550084C71F /* ArticleStockers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4418E0236831550084C71F /* ArticleStockers.swift */; };
+		BF4982082377A9FA00E9C46E /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4982072377A9FA00E9C46E /* Auth.swift */; };
+		BF49820A2377B83A00E9C46E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4982092377B83A00E9C46E /* WebKit.framework */; };
 		BF4F3909235240F500661971 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F3908235240F500661971 /* User.swift */; };
 		BF4F390B2352414100661971 /* ArticleStockersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F390A2352414100661971 /* ArticleStockersRequest.swift */; };
 		BF4F390E2352427900661971 /* ArticleStockersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F390D2352427900661971 /* ArticleStockersTest.swift */; };
@@ -84,6 +86,8 @@
 		BF2592D42326AA770064F498 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		BF4418DE23680B410084C71F /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		BF4418E0236831550084C71F /* ArticleStockers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStockers.swift; sourceTree = "<group>"; };
+		BF4982072377A9FA00E9C46E /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		BF4982092377B83A00E9C46E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BF4F3908235240F500661971 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF4F390A2352414100661971 /* ArticleStockersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStockersRequest.swift; sourceTree = "<group>"; };
 		BF4F390C2352425700661971 /* GET_stockers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_stockers.json; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				BF49820A2377B83A00E9C46E /* WebKit.framework in Frameworks */,
 				FC08B3AB741B1E6025611FFC /* Pods_QiitaAPIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +150,7 @@
 		39FD74CA3554C67D781D5C2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF4982092377B83A00E9C46E /* WebKit.framework */,
 				F9D9CE7BE97B8D2F91A42D4A /* Pods_QiitaAPIKit.framework */,
 				A5200672B553D0B80A78B250 /* Pods_QiitaAPIKitPackageDescription.framework */,
 				644E337B9372A515EE690924 /* Pods_QiitaAPIKitTests.framework */,
@@ -234,6 +240,7 @@
 		OBJ_8 /* QiitaAPIKit */ = {
 			isa = PBXGroup;
 			children = (
+				BF4982072377A9FA00E9C46E /* Auth.swift */,
 				BF2592D0232687C90064F498 /* Article.swift */,
 				BF2592D2232688E60064F498 /* ArticleRequest.swift */,
 				BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */,
@@ -459,6 +466,7 @@
 				BF4418DF23680B410084C71F /* RequestType.swift in Sources */,
 				BF7ACBDD2345D02900A8395A /* ArticleCommentRequest.swift in Sources */,
 				BF7ACBDB2345CF4000A8395A /* ArticleComment.swift in Sources */,
+				BF4982082377A9FA00E9C46E /* Auth.swift in Sources */,
 				BF2592D52326AA770064F498 /* Error.swift in Sources */,
 				BFD28CED234A35690040604C /* Tag.swift in Sources */,
 				BFBABB2623521FBD0086CD25 /* ArticleLike.swift in Sources */,

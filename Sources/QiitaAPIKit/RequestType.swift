@@ -38,6 +38,7 @@ public extension RequestType {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
 
         var request = URLRequest(url: components.url!)
+        request.httpMethod = httpMethod.rawValue
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
 

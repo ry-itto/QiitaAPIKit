@@ -54,10 +54,6 @@ public protocol QiitaAPIKitAuthDelegate: class {
 }
 
 extension QiitaAPIKit.Auth: WKNavigationDelegate {
-    public func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        print(navigation)
-    }
-
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if webView.url?.absoluteString.contains(redirectURLString) ?? false {
             decisionHandler(.cancel)

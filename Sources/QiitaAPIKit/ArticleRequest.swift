@@ -23,7 +23,7 @@ public extension QiitaAPIKit {
 
         public var accessToken: String?
 
-        public init(accessToken: String?, requestQueryItem: Request) {
+        public init(accessToken: String? = nil, requestQueryItem: Request) {
             self.accessToken = accessToken
             self.requestQueryItem = requestQueryItem
         }

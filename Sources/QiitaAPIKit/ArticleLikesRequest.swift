@@ -28,7 +28,7 @@ public extension QiitaAPIKit {
 
         public var accessToken: String?
 
-        public init(accessToken: String?, id: String) {
+        public init(accessToken: String? = nil, id: String) {
             self.accessToken = accessToken
             self.id = id
         }

@@ -26,7 +26,7 @@ public extension QiitaAPIKit {
 
         public var accessToken: String?
 
-        public init(accessToken: String?, id: String, requestQueryItems: Request = Request()) {
+        public init(accessToken: String? = nil, id: String, requestQueryItems: Request = Request()) {
             self.accessToken = accessToken
             self.id = id
             self.requestQueryItem = requestQueryItems

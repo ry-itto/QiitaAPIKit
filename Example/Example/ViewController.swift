@@ -42,7 +42,7 @@ class ViewController: UIViewController, ViewProtocol {
     required init?(coder: NSCoder) {
         super.init(nibName: nil, bundle: nil)
         self.presenter = ViewPresenter(self)
-        self.auth = QiitaAPIKit.Auth(clientID: "f584f9f45a56992f2552e4fe7f04640cc32066f0", clientSecret: "c5fe03dc7552781fec8eaf49eebfe8b520ece4e9", redirectURLString: "https://qiita.com/ry-itto", scope: [.readQiita])
+        self.auth = QiitaAPIKit.Auth(clientID: "27576045662ee79985d663b00385e1a2a699b215", clientSecret: "f35906055f94a37f5bfc00376b2cc7208859ba8a", redirectURLString: "https://qiita.com/ry-itto", scope: [.readQiita])
     }
 
     override func viewWillAppear(_ animated: Bool) {

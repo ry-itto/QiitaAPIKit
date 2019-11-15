@@ -108,6 +108,15 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: QiitaAPIKitAuthDelegate {
+    func fetchedAccessToken(accessToken: String?, error: Error?) {
+        if let accessToken = accessToken {
+            UserDefaults.standard.set(accessToken, forKey: "qiita_access_token")
+            print(accessToken)
+        } else {
+            print(error)
+        }
+    }
+
     func present(loginView: UIViewController) {
         present(loginView, animated: true)
     }

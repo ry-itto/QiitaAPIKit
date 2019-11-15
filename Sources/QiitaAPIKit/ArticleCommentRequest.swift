@@ -26,7 +26,10 @@ public extension QiitaAPIKit {
 
         public var httpMethod: HttpMethod = .GET
 
-        public init(id: String) {
+        public var accessToken: String?
+
+        public init(accessToken: String?, id: String) {
+            self.accessToken = accessToken
             self.id = id
         }
     }

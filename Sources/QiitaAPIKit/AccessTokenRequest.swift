@@ -17,6 +17,8 @@ internal extension QiitaAPIKit {
 
         internal var httpMethod: HttpMethod = .POST
 
+        internal var accessToken: String?
+
         internal init(requestQueryItem: Request) {
             self.requestQueryItem = requestQueryItem
         }

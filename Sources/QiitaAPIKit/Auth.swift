@@ -45,18 +45,45 @@ public extension QiitaAPIKit {
             vc.webView.navigationDelegate = self
             delegate?.present(loginView: vc)
         }
+
+        private func fetchAccessToken(from redirecrtURL: URL, completion: @escaping (Result<AccessToken.Response, Error>) -> Void) {
+            let components = URLComponents(string: redirecrtURL.absoluteString)
+            guard let code = components?.queryItems?.first(where: { $0.name == "code" })?.value else {
+                completion(.failure(APIError.DataIsNotFetched))
+                return
+            }
+            let accessTokenRequest = AccessTokenRequest(requestQueryItem: .init(clientID: clientID, clientSecret: clientSecret, code: code))
+            accessTokenRequest.request { result in
+                switch result {
+                case .success(let response):
+                    completion(.success(response))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        }
     }
 }
 
 public protocol QiitaAPIKitAuthDelegate: class {
     func present(loginView: UIViewController)
     func dismissLoginView()
+    func fetchedAccessToken(accessToken: String?, error: Error?)
 }
 
 extension QiitaAPIKit.Auth: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        if webView.url?.absoluteString.contains(redirectURLString) ?? false {
+        if let redirectURL = webView.url,
+            webView.url?.absoluteString.contains(redirectURLString) ?? false {
             decisionHandler(.cancel)
+            fetchAccessToken(from: redirectURL) { [weak self] result in
+                switch result {
+                case .success(let response):
+                    self?.delegate?.fetchedAccessToken(accessToken: response.token, error: nil)
+                case .failure(let error):
+                    self?.delegate?.fetchedAccessToken(accessToken: nil, error: error)
+                }
+            }
             delegate?.dismissLoginView()
         } else {
             decisionHandler(.allow)

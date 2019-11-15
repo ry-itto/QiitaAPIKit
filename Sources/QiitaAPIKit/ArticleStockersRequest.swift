@@ -22,6 +22,8 @@ public extension QiitaAPIKit {
         }
         public var requestQueryItem: ArticleStockers.Request
 
+        public var httpMethod: HttpMethod = .GET
+
         public init(id: String, requestQueryItems: Request = Request()) {
             self.id = id
             self.requestQueryItem = requestQueryItems

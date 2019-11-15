@@ -20,6 +20,8 @@ public extension QiitaAPIKit {
         }
         public var requestQueryItem: Tag.Request
 
+        public var httpMethod: HttpMethod = .GET
+
         public init(requestQueryItem: Request = Request()) {
             self.requestQueryItem = requestQueryItem
         }

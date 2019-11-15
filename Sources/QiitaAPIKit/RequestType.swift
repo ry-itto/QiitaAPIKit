@@ -18,6 +18,7 @@ public protocol RequestType {
 
     var requestURLString: String { get }
     var requestQueryItem: Request { get }
+    var httpMethod: HttpMethod { get }
 
     func request(completion: @escaping (Result<Response, Error>) -> Void)
 }

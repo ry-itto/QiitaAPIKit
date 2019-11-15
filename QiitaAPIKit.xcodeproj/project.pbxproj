@@ -47,6 +47,7 @@
 		BFD28CF3234A693E0040604C /* GET_tags.json in Resources */ = {isa = PBXBuildFile; fileRef = BFD28CF2234A68240040604C /* GET_tags.json */; };
 		BFDACAFB233F525600B22C45 /* ArticleRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */; };
 		BFDACB01233F5BB400B22C45 /* GET_items.json in Resources */ = {isa = PBXBuildFile; fileRef = BFDACAFE233F581100B22C45 /* GET_items.json */; };
+		BFE50749237E406F005B3AE2 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE50748237E406F005B3AE2 /* HttpMethod.swift */; };
 		D6BF88CADDC541904BDB1C7F /* Pods_QiitaAPIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644E337B9372A515EE690924 /* Pods_QiitaAPIKitTests.framework */; };
 		FC08B3AB741B1E6025611FFC /* Pods_QiitaAPIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D9CE7BE97B8D2F91A42D4A /* Pods_QiitaAPIKit.framework */; };
 		OBJ_23 /* QiitaAPIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* QiitaAPIKit.swift */; };
@@ -106,6 +107,7 @@
 		BFD28CF2234A68240040604C /* GET_tags.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_tags.json; sourceTree = "<group>"; };
 		BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRequestTest.swift; sourceTree = "<group>"; };
 		BFDACAFE233F581100B22C45 /* GET_items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GET_items.json; sourceTree = "<group>"; };
+		BFE50748237E406F005B3AE2 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		EAF0720F2F8179955A9B586F /* Pods-QiitaAPIKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaAPIKitTests.release.xcconfig"; path = "Target Support Files/Pods-QiitaAPIKitTests/Pods-QiitaAPIKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		F9D9CE7BE97B8D2F91A42D4A /* Pods_QiitaAPIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaAPIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* QiitaAPIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIKitTests.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				BF4418E0236831550084C71F /* ArticleStockers.swift */,
 				BF4F390A2352414100661971 /* ArticleStockersRequest.swift */,
 				BF2592D42326AA770064F498 /* Error.swift */,
+				BFE50748237E406F005B3AE2 /* HttpMethod.swift */,
 				OBJ_9 /* QiitaAPIKit.swift */,
 				BF4418DE23680B410084C71F /* RequestType.swift */,
 				BFD28CEC234A35690040604C /* Tag.swift */,
@@ -465,6 +468,7 @@
 				BFBABB282352201F0086CD25 /* ArticleLikesRequest.swift in Sources */,
 				BF4418DF23680B410084C71F /* RequestType.swift in Sources */,
 				BF7ACBDD2345D02900A8395A /* ArticleCommentRequest.swift in Sources */,
+				BFE50749237E406F005B3AE2 /* HttpMethod.swift in Sources */,
 				BF7ACBDB2345CF4000A8395A /* ArticleComment.swift in Sources */,
 				BF4982082377A9FA00E9C46E /* Auth.swift in Sources */,
 				BF2592D52326AA770064F498 /* Error.swift in Sources */,

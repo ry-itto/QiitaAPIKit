@@ -24,6 +24,8 @@ public extension QiitaAPIKit {
             return ArticleLike.Request()
         }
 
+        public var httpMethod: HttpMethod = .GET
+
         public init(id: String) {
             self.id = id
         }

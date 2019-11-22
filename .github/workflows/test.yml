@@ -18,5 +18,7 @@ jobs:
       run: xcrun instruments -s
     - name: Pod install
       run: bundle && bundle exec pod install
+    - name: Lint this package
+      run: make lint
     - name: xcode test
       run: xcodebuild test -workspace QiitaAPIKit.xcworkspace -scheme QiitaAPIKit -destination '${{matrix.destination}}'

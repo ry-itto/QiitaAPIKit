@@ -1,0 +1,16 @@
+name: pod-deploy
+
+on:
+  push:
+    branches: master
+    tags: v*
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Lint this library
+      run: make lint
+    - name: deploy to trunk
+      run: make deploy

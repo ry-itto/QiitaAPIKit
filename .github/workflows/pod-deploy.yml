@@ -1,4 +1,4 @@
-name: CI
+name: pod-deploy
 
 on:
   push:

@@ -18,6 +18,8 @@ public protocol RequestType {
 
     var requestURLString: String { get }
     var requestQueryItem: Request { get }
+    var httpMethod: HttpMethod { get }
+    var accessToken: String? { get }
 
     func request(completion: @escaping (Result<Response, Error>) -> Void)
 }
@@ -37,6 +39,10 @@ public extension RequestType {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
 
         var request = URLRequest(url: components.url!)
+        request.httpMethod = httpMethod.rawValue
+        if let accessToken = accessToken {
+            request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        }
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
 

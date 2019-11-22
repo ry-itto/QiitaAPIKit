@@ -12,3 +12,10 @@ library for [Qiita API](https://qiita.com/api/v2/docs).
 |`/api/v2/items/:item_id/stockers`|GET|`ArticleStockersRequest`|
 |`/api/v2/tags`|GET|`TagRequest`|
 
+## How to Login
+1. Initialize struct of `Auth` with `client_id`, `client_secret`, `redirect_url`, and `scope`.
+2. Use `showLoginView()` function.
+※ Before using Login, adopt protocol `QiitaAPIKitAuthDelegate`.
+
+## To increase limit of API request
+Set `access_token` to Initializer.

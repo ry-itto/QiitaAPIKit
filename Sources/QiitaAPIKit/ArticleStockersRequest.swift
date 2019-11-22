@@ -22,7 +22,12 @@ public extension QiitaAPIKit {
         }
         public var requestQueryItem: ArticleStockers.Request
 
-        public init(id: String, requestQueryItems: Request = Request()) {
+        public var httpMethod: HttpMethod = .GET
+
+        public var accessToken: String?
+
+        public init(accessToken: String? = nil, id: String, requestQueryItems: Request = Request()) {
+            self.accessToken = accessToken
             self.id = id
             self.requestQueryItem = requestQueryItems
         }

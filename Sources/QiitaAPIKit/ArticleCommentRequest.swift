@@ -24,7 +24,12 @@ public extension QiitaAPIKit {
             return ArticleComment.Request()
         }
 
-        public init(id: String) {
+        public var httpMethod: HttpMethod = .GET
+
+        public var accessToken: String?
+
+        public init(accessToken: String? = nil, id: String) {
+            self.accessToken = accessToken
             self.id = id
         }
     }

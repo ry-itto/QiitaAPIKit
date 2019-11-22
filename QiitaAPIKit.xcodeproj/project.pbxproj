@@ -27,10 +27,14 @@
 		BF2592D52326AA770064F498 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2592D42326AA770064F498 /* Error.swift */; };
 		BF4418DF23680B410084C71F /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4418DE23680B410084C71F /* RequestType.swift */; };
 		BF4418E1236831550084C71F /* ArticleStockers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4418E0236831550084C71F /* ArticleStockers.swift */; };
+		BF4982082377A9FA00E9C46E /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4982072377A9FA00E9C46E /* Auth.swift */; };
+		BF49820A2377B83A00E9C46E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4982092377B83A00E9C46E /* WebKit.framework */; };
 		BF4F3909235240F500661971 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F3908235240F500661971 /* User.swift */; };
 		BF4F390B2352414100661971 /* ArticleStockersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F390A2352414100661971 /* ArticleStockersRequest.swift */; };
 		BF4F390E2352427900661971 /* ArticleStockersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F390D2352427900661971 /* ArticleStockersTest.swift */; };
 		BF4F390F235242FF00661971 /* GET_stockers.json in Resources */ = {isa = PBXBuildFile; fileRef = BF4F390C2352425700661971 /* GET_stockers.json */; };
+		BF646803237E431100ADD18F /* AccessTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF646801237E431100ADD18F /* AccessTokenRequest.swift */; };
+		BF646804237E431100ADD18F /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF646802237E431100ADD18F /* AccessToken.swift */; };
 		BF7ACBDB2345CF4000A8395A /* ArticleComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */; };
 		BF7ACBDD2345D02900A8395A /* ArticleCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */; };
 		BF7ACBDF2345D29200A8395A /* ArticleCommentsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */; };
@@ -45,6 +49,7 @@
 		BFD28CF3234A693E0040604C /* GET_tags.json in Resources */ = {isa = PBXBuildFile; fileRef = BFD28CF2234A68240040604C /* GET_tags.json */; };
 		BFDACAFB233F525600B22C45 /* ArticleRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */; };
 		BFDACB01233F5BB400B22C45 /* GET_items.json in Resources */ = {isa = PBXBuildFile; fileRef = BFDACAFE233F581100B22C45 /* GET_items.json */; };
+		BFE50749237E406F005B3AE2 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE50748237E406F005B3AE2 /* HttpMethod.swift */; };
 		D6BF88CADDC541904BDB1C7F /* Pods_QiitaAPIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644E337B9372A515EE690924 /* Pods_QiitaAPIKitTests.framework */; };
 		FC08B3AB741B1E6025611FFC /* Pods_QiitaAPIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D9CE7BE97B8D2F91A42D4A /* Pods_QiitaAPIKit.framework */; };
 		OBJ_23 /* QiitaAPIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* QiitaAPIKit.swift */; };
@@ -84,10 +89,14 @@
 		BF2592D42326AA770064F498 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		BF4418DE23680B410084C71F /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		BF4418E0236831550084C71F /* ArticleStockers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStockers.swift; sourceTree = "<group>"; };
+		BF4982072377A9FA00E9C46E /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		BF4982092377B83A00E9C46E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BF4F3908235240F500661971 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF4F390A2352414100661971 /* ArticleStockersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStockersRequest.swift; sourceTree = "<group>"; };
 		BF4F390C2352425700661971 /* GET_stockers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_stockers.json; sourceTree = "<group>"; };
 		BF4F390D2352427900661971 /* ArticleStockersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStockersTest.swift; sourceTree = "<group>"; };
+		BF646801237E431100ADD18F /* AccessTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenRequest.swift; sourceTree = "<group>"; };
+		BF646802237E431100ADD18F /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleComment.swift; sourceTree = "<group>"; };
 		BF7ACBDC2345D02900A8395A /* ArticleCommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentRequest.swift; sourceTree = "<group>"; };
 		BF7ACBDE2345D29200A8395A /* ArticleCommentsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCommentsRequestTest.swift; sourceTree = "<group>"; };
@@ -102,6 +111,7 @@
 		BFD28CF2234A68240040604C /* GET_tags.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GET_tags.json; sourceTree = "<group>"; };
 		BFDACAFA233F525600B22C45 /* ArticleRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRequestTest.swift; sourceTree = "<group>"; };
 		BFDACAFE233F581100B22C45 /* GET_items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GET_items.json; sourceTree = "<group>"; };
+		BFE50748237E406F005B3AE2 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		EAF0720F2F8179955A9B586F /* Pods-QiitaAPIKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaAPIKitTests.release.xcconfig"; path = "Target Support Files/Pods-QiitaAPIKitTests/Pods-QiitaAPIKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		F9D9CE7BE97B8D2F91A42D4A /* Pods_QiitaAPIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaAPIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* QiitaAPIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIKitTests.swift; sourceTree = "<group>"; };
@@ -126,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				BF49820A2377B83A00E9C46E /* WebKit.framework in Frameworks */,
 				FC08B3AB741B1E6025611FFC /* Pods_QiitaAPIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +156,7 @@
 		39FD74CA3554C67D781D5C2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF4982092377B83A00E9C46E /* WebKit.framework */,
 				F9D9CE7BE97B8D2F91A42D4A /* Pods_QiitaAPIKit.framework */,
 				A5200672B553D0B80A78B250 /* Pods_QiitaAPIKitPackageDescription.framework */,
 				644E337B9372A515EE690924 /* Pods_QiitaAPIKitTests.framework */,
@@ -234,6 +246,9 @@
 		OBJ_8 /* QiitaAPIKit */ = {
 			isa = PBXGroup;
 			children = (
+				BF646802237E431100ADD18F /* AccessToken.swift */,
+				BF646801237E431100ADD18F /* AccessTokenRequest.swift */,
+				BF4982072377A9FA00E9C46E /* Auth.swift */,
 				BF2592D0232687C90064F498 /* Article.swift */,
 				BF2592D2232688E60064F498 /* ArticleRequest.swift */,
 				BF7ACBDA2345CF4000A8395A /* ArticleComment.swift */,
@@ -243,6 +258,7 @@
 				BF4418E0236831550084C71F /* ArticleStockers.swift */,
 				BF4F390A2352414100661971 /* ArticleStockersRequest.swift */,
 				BF2592D42326AA770064F498 /* Error.swift */,
+				BFE50748237E406F005B3AE2 /* HttpMethod.swift */,
 				OBJ_9 /* QiitaAPIKit.swift */,
 				BF4418DE23680B410084C71F /* RequestType.swift */,
 				BFD28CEC234A35690040604C /* Tag.swift */,
@@ -458,10 +474,14 @@
 				BFBABB282352201F0086CD25 /* ArticleLikesRequest.swift in Sources */,
 				BF4418DF23680B410084C71F /* RequestType.swift in Sources */,
 				BF7ACBDD2345D02900A8395A /* ArticleCommentRequest.swift in Sources */,
+				BFE50749237E406F005B3AE2 /* HttpMethod.swift in Sources */,
+				BF646803237E431100ADD18F /* AccessTokenRequest.swift in Sources */,
 				BF7ACBDB2345CF4000A8395A /* ArticleComment.swift in Sources */,
+				BF4982082377A9FA00E9C46E /* Auth.swift in Sources */,
 				BF2592D52326AA770064F498 /* Error.swift in Sources */,
 				BFD28CED234A35690040604C /* Tag.swift in Sources */,
 				BFBABB2623521FBD0086CD25 /* ArticleLike.swift in Sources */,
+				BF646804237E431100ADD18F /* AccessToken.swift in Sources */,
 				BF4418E1236831550084C71F /* ArticleStockers.swift in Sources */,
 				BF2592D1232687C90064F498 /* Article.swift in Sources */,
 				OBJ_23 /* QiitaAPIKit.swift in Sources */,

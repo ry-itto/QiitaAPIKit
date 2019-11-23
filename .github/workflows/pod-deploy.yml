@@ -12,6 +12,7 @@ jobs:
     - name: Set secret variable
       env:
         EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+      run: echo ${ EMAIL_ADDRESS }
     - name: Lint this library
       run: make lint
     - name: Register session

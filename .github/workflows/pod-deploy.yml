@@ -11,5 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Lint this library
       run: make lint
+    - name: Register session
+      run: pod trunk register
     - name: deploy to trunk
       run: make deploy

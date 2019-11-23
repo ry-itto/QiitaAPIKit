@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "QiitaAPIKit"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "A breif tool to use Qiita API (v2)"
   spec.description  = <<-DESC
   A breif tool to use Qiita API (v2) : https://qiita.com/api/v2/docs
@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
   spec.social_media_url   = "https://twitter.com/ry_itto"
   spec.platform     = :ios, "11.0"
   spec.swift_versions = '5.0'
-  spec.source       = { :git => "https://github.com/ry-itto/QiitaAPIKit.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/ry-itto/QiitaAPIKit.git", :tag => "v#{spec.version}" }
   spec.source_files = "Sources/QiitaAPIKit/*.swift"
   spec.dependency 'OHHTTPStubs', '~> 8.0'
   spec.requires_arc = true

@@ -9,9 +9,12 @@ jobs:
     runs-on: macOS-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Set secret variable
+      env:
+        EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
     - name: Lint this library
       run: make lint
     - name: Register session
-      run: pod trunk register
+      run: pod trunk register ${ EMAIL_ADDRESS }
     - name: deploy to trunk
       run: make deploy

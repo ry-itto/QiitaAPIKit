@@ -11,9 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Lint this library
       run: make lint
-    - name: Register session
-      env:
-        EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
-      run: pod trunk register ${EMAIL_ADDRESS}
     - name: deploy to trunk
+      env:
+        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
       run: make deploy

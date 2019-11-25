@@ -28,3 +28,5 @@ public enum ArticleStockers {
 
     public typealias Response = User
 }
+
+extension ArticleStockers.Response: Identifiable {}

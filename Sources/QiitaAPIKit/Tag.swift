@@ -53,3 +53,5 @@ public enum Tag {
     }
 
 }
+
+extension Tag.Response: Identifiable {}

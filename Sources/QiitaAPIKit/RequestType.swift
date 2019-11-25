@@ -7,20 +7,34 @@
 
 import Foundation
 
+/// The protocol for requesting API request
 public protocol RequestQueryItem {
+    /// validate parameters
     func isValidParameters() -> Bool
+
+    /// get query parameters
     func queryItems() -> [URLQueryItem]
 }
 
+/// Type of API Request
 public protocol RequestType {
     associatedtype Request: RequestQueryItem
     associatedtype Response: Decodable
 
+    /// String value of URL. e.g. http://example.com
     var requestURLString: String { get }
+
+    /// type of Request's instance.
     var requestQueryItem: Request { get }
+
+    /// Request Http Method.
     var httpMethod: HttpMethod { get }
+
+    /// Qiita access token.
     var accessToken: String? { get }
 
+    /// function of request
+    /// - Parameter completion: execute this function when network connection completed.
     func request(completion: @escaping (Result<Response, Error>) -> Void)
 }
 

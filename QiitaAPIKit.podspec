@@ -21,6 +21,5 @@ Pod::Spec.new do |spec|
   spec.swift_versions = '5.0'
   spec.source       = { :git => "https://github.com/ry-itto/QiitaAPIKit.git", :tag => "v#{spec.version}" }
   spec.source_files = "Sources/QiitaAPIKit/*.swift"
-  spec.dependency 'OHHTTPStubs', '~> 8.0'
   spec.requires_arc = true
 end

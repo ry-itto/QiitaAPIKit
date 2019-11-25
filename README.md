@@ -4,7 +4,7 @@
 library for [Qiita API](https://qiita.com/api/v2/docs).
 
 ## Supported APIs
-|End point|HTTP Method|struct|
+|Endpoint|HTTP Method|struct|
 |--|--|--|
 |`/api/v2/items`|GET|`ArticleRequest`|
 |`/api/v2/items/:item_id/comments`|GET|`ArticleCommentRequest`|

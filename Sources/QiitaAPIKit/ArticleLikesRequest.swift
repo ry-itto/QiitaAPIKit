@@ -15,6 +15,7 @@ public extension QiitaAPIKit {
         public typealias Request = ArticleLike.Request
         public typealias Response = [ArticleLike.Response]
 
+        /// Article ID
         let id: String
 
         public var requestURLString: String {
@@ -28,6 +29,9 @@ public extension QiitaAPIKit {
 
         public var accessToken: String?
 
+        /// initializer
+        /// - Parameter accessToken: Qiita access token
+        /// - Parameter id: Article ID
         public init(accessToken: String? = nil, id: String) {
             self.accessToken = accessToken
             self.id = id

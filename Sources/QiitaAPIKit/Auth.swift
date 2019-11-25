@@ -10,14 +10,24 @@ import UIKit
 import WebKit
 
 public extension QiitaAPIKit {
+    /// The class for using Qiita's auth.
     class Auth: NSObject {
+        /// Qiita client ID to specify API client
         private let clientID: String
+        /// Qiita client secret
         private let clientSecret: String
+        /// The scope that your application uses.
         private let scope: String
+        /// redirect URL after auth process ended.
         private let redirectURLString: String
 
         public weak var delegate: QiitaAPIKitAuthDelegate?
 
+        /// initializer
+        /// - Parameter clientID: Qiita client ID to specify API client
+        /// - Parameter clientSecret: Qiita client secret
+        /// - Parameter redirectURLString: redirect URL after auth process ended.
+        /// - Parameter scope: The scope that your application uses.
         public init(clientID: String, clientSecret: String, redirectURLString: String, scope: [Scope]) {
             self.clientID = clientID
             self.clientSecret = clientSecret
@@ -40,6 +50,7 @@ public extension QiitaAPIKit {
             return url
         }
 
+        /// Show login view to authenticate user.
         public func showLoginView() -> Void {
             let vc = WebViewController(url: authorizeURL)
             vc.webView.navigationDelegate = self
@@ -66,8 +77,13 @@ public extension QiitaAPIKit {
 }
 
 public protocol QiitaAPIKitAuthDelegate: class {
+    /// Present login view.
+    /// - Parameter loginView: login view
     func present(loginView: UIViewController)
     func dismissLoginView()
+    /// This function invokes when fetch access token or fail.
+    /// - Parameter accessToken: Fetched access token.
+    /// - Parameter error: An error.
     func fetchedAccessToken(accessToken: String?, error: Error?)
 }
 
@@ -90,6 +106,7 @@ extension QiitaAPIKit.Auth: WKNavigationDelegate {
         }
     }
 
+    /// Qiita API's operate scope.
     public enum Scope: String {
         case readQiita = "read_qiita"
         case readQiitaTeam = "read_qiita_team"

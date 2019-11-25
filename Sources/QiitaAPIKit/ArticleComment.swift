@@ -19,11 +19,14 @@ public enum ArticleComment {
     }
 
     public struct Response: Decodable {
-        let body: String
-        let createdAt: Date
-        let id: String
-        let renderedBody: String
-        let updatedAt: Date
-        let user: User
+        public let body: String
+        public let createdAt: Date
+        public let id: String
+        public let renderedBody: String
+        public let updatedAt: Date
+        public let user: User
     }
 }
+
+@available(iOS 13.0, *)
+extension ArticleComment.Response: Identifiable {}

@@ -93,3 +93,6 @@ public struct Group: Decodable {
         case urlName
     }
 }
+
+@available(iOS 13.0, *)
+extension Article.Response: Identifiable {}

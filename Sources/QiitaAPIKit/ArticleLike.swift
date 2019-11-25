@@ -23,3 +23,9 @@ public enum ArticleLike {
         public let user: User
     }
 }
+
+extension ArticleLike.Response: Identifiable {
+    public var id: String {
+        user.id
+    }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - QiitaAPIKit (0.0.7)
+
+DEPENDENCIES:
+  - QiitaAPIKit (from `../`)
+
+EXTERNAL SOURCES:
+  QiitaAPIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  QiitaAPIKit: 3a3948ff6fc4c1f30832e108b5ab78e60acc6602
+
+PODFILE CHECKSUM: cf63aeaf94e7e9d94ccc23ada0b62bc218b3baae
+
+COCOAPODS: 1.8.4

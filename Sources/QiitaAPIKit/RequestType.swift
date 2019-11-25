@@ -79,3 +79,33 @@ public extension RequestType {
         task.resume()
     }
 }
+
+#if canImport(Combine)
+import Combine
+
+@available(iOS 13.0, *)
+public extension RequestType {
+    var publisher: QiitaAPIKitPublisher<Self> {
+        return QiitaAPIKitPublisher(requestType: self)
+    }
+}
+
+@available(iOS 13.0, *)
+public struct QiitaAPIKitPublisher<Request: RequestType>: Publisher {
+    public typealias Output = Request.Response
+    public typealias Failure = Error
+
+    var requestType: Request?
+
+    public func receive<S>(subscriber: S) where S : Subscriber, Failure == S.Failure, Output == S.Input {
+        requestType?.request { result in
+            switch result {
+            case .success(let response):
+                _ = subscriber.receive(response)
+            case .failure(let error):
+                subscriber.receive(completion: .failure(error))
+            }
+        }
+    }
+}
+#endif

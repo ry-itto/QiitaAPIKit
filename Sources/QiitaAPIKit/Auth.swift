@@ -9,68 +9,66 @@ import Foundation
 import UIKit
 import WebKit
 
-public extension QiitaAPIKit {
     /// The class for using Qiita's auth.
-    class Auth: NSObject {
-        /// Qiita client ID to specify API client
-        private let clientID: String
-        /// Qiita client secret
-        private let clientSecret: String
-        /// The scope that your application uses.
-        private let scope: String
-        /// redirect URL after auth process ended.
-        private let redirectURLString: String
+public class Auth: NSObject {
+    /// Qiita client ID to specify API client
+    private let clientID: String
+    /// Qiita client secret
+    private let clientSecret: String
+    /// The scope that your application uses.
+    private let scope: String
+    /// redirect URL after auth process ended.
+    private let redirectURLString: String
 
-        public weak var delegate: QiitaAPIKitAuthDelegate?
+    public weak var delegate: QiitaAPIKitAuthDelegate?
 
-        /// initializer
-        /// - Parameter clientID: Qiita client ID to specify API client
-        /// - Parameter clientSecret: Qiita client secret
-        /// - Parameter redirectURLString: redirect URL after auth process ended.
-        /// - Parameter scope: The scope that your application uses.
-        public init(clientID: String, clientSecret: String, redirectURLString: String, scope: [Scope]) {
-            self.clientID = clientID
-            self.clientSecret = clientSecret
-            self.redirectURLString = redirectURLString
-            self.scope = scope.map { $0.rawValue }.joined(separator: " ")
+    /// initializer
+    /// - Parameter clientID: Qiita client ID to specify API client
+    /// - Parameter clientSecret: Qiita client secret
+    /// - Parameter redirectURLString: redirect URL after auth process ended.
+    /// - Parameter scope: The scope that your application uses.
+    public init(clientID: String, clientSecret: String, redirectURLString: String, scope: [Scope]) {
+        self.clientID = clientID
+        self.clientSecret = clientSecret
+        self.redirectURLString = redirectURLString
+        self.scope = scope.map { $0.rawValue }.joined(separator: " ")
+    }
+
+    private var authorizeURL: URL {
+        var urlComponents = URLComponents(string: "https://qiita.com/api/v2/oauth/authorize")
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "client_id", value: clientID),
+            URLQueryItem(name: "client_secret", value: clientSecret),
+            URLQueryItem(name: "scope", value: scope)
+        ]
+
+        guard let url = urlComponents?.url else {
+            fatalError("query items are not valid")
         }
 
-        private var authorizeURL: URL {
-            var urlComponents = URLComponents(string: "https://qiita.com/api/v2/oauth/authorize")
-            urlComponents?.queryItems = [
-                URLQueryItem(name: "client_id", value: clientID),
-                URLQueryItem(name: "client_secret", value: clientSecret),
-                URLQueryItem(name: "scope", value: scope)
-            ]
+        return url
+    }
 
-            guard let url = urlComponents?.url else {
-                fatalError("query items are not valid")
-            }
+    /// Show login view to authenticate user.
+    public func showLoginView() -> Void {
+        let vc = WebViewController(url: authorizeURL)
+        vc.webView.navigationDelegate = self
+        delegate?.present(loginView: vc)
+    }
 
-            return url
+    private func fetchAccessToken(from redirecrtURL: URL, completion: @escaping (Result<AccessToken.Response, Error>) -> Void) {
+        let components = URLComponents(string: redirecrtURL.absoluteString)
+        guard let code = components?.queryItems?.first(where: { $0.name == "code" })?.value else {
+            completion(.failure(APIError.DataIsNotFetched))
+            return
         }
-
-        /// Show login view to authenticate user.
-        public func showLoginView() -> Void {
-            let vc = WebViewController(url: authorizeURL)
-            vc.webView.navigationDelegate = self
-            delegate?.present(loginView: vc)
-        }
-
-        private func fetchAccessToken(from redirecrtURL: URL, completion: @escaping (Result<AccessToken.Response, Error>) -> Void) {
-            let components = URLComponents(string: redirecrtURL.absoluteString)
-            guard let code = components?.queryItems?.first(where: { $0.name == "code" })?.value else {
-                completion(.failure(APIError.DataIsNotFetched))
-                return
-            }
-            let accessTokenRequest = AccessTokenRequest(requestQueryItem: .init(clientID: clientID, clientSecret: clientSecret, code: code))
-            accessTokenRequest.request { result in
-                switch result {
-                case .success(let response):
-                    completion(.success(response))
-                case .failure(let error):
-                    completion(.failure(error))
-                }
+        let accessTokenRequest = AccessTokenRequest(requestQueryItem: .init(clientID: clientID, clientSecret: clientSecret, code: code))
+        accessTokenRequest.request { result in
+            switch result {
+            case .success(let response):
+                completion(.success(response))
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
     }
@@ -87,7 +85,7 @@ public protocol QiitaAPIKitAuthDelegate: class {
     func fetchedAccessToken(accessToken: String?, error: Error?)
 }
 
-extension QiitaAPIKit.Auth: WKNavigationDelegate {
+extension Auth: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let redirectURL = webView.url,
             webView.url?.absoluteString.contains(redirectURLString) ?? false {

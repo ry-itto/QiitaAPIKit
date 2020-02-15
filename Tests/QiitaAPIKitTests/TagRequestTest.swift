@@ -11,15 +11,13 @@ import OHHTTPStubs
 
 class TagRequestTest: XCTestCase {
 
-    let apiKit = QiitaAPIKit()
-
     override func tearDown() {
         OHHTTPStubs.removeAllStubs()
     }
 
     func test_fetchTagsAlive() {
         let exp = expectation(description: "Target host is alive")
-        QiitaAPIKit.TagRequest().request { result in
+        TagRequest().request { result in
             switch result {
             case .success:
                 exp.fulfill()
@@ -42,7 +40,7 @@ class TagRequestTest: XCTestCase {
         }
 
         let exp = expectation(description: "Success to decode")
-        QiitaAPIKit.TagRequest().request { result in
+        TagRequest().request { result in
             switch result {
             case .success(let tags):
                 XCTAssert(tags.count == 1)
@@ -56,7 +54,7 @@ class TagRequestTest: XCTestCase {
     }
 
     func test_fetchTags_PageOutOfRange() {
-        QiitaAPIKit.TagRequest(requestQueryItem: .init(page: 0)).request { result in
+        TagRequest(requestQueryItem: .init(page: 0)).request { result in
             switch result {
             case .success:
                 XCTFail()

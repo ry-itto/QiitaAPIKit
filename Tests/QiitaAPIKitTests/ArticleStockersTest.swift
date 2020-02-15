@@ -19,7 +19,7 @@ final class ArticleStockersTest: XCTestCase {
 
     func test_fetchArticleLikesAlive() {
         let exp = expectation(description: "Target host is alive")
-        QiitaAPIKit.ArticleStockersRequest(id: articleID).request { result in
+        ArticleStockersRequest(id: articleID).request { result in
             switch result {
             case .success:
                 exp.fulfill()
@@ -43,7 +43,7 @@ final class ArticleStockersTest: XCTestCase {
         }
 
         let exp = expectation(description: "Success to decode")
-        QiitaAPIKit.ArticleStockersRequest(id: articleID).request { result in
+        ArticleStockersRequest(id: articleID).request { result in
             switch result {
             case .success(let response):
                 XCTAssert(response.count == 1)
@@ -66,7 +66,7 @@ final class ArticleStockersTest: XCTestCase {
         }
 
         let exp = expectation(description: "Success to decode")
-        QiitaAPIKit.ArticleStockersRequest(id: articleID,requestQueryItems: .init(page: 0)).request { result in
+        ArticleStockersRequest(id: articleID,requestQueryItems: .init(page: 0)).request { result in
             switch result {
             case .success:
                 XCTFail()

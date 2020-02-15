@@ -52,7 +52,6 @@
 		BFE50749237E406F005B3AE2 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE50748237E406F005B3AE2 /* HttpMethod.swift */; };
 		D6BF88CADDC541904BDB1C7F /* Pods_QiitaAPIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644E337B9372A515EE690924 /* Pods_QiitaAPIKitTests.framework */; };
 		FC08B3AB741B1E6025611FFC /* Pods_QiitaAPIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D9CE7BE97B8D2F91A42D4A /* Pods_QiitaAPIKit.framework */; };
-		OBJ_23 /* QiitaAPIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* QiitaAPIKit.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_41 /* QiitaAPIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* QiitaAPIKitTests.swift */; };
 		OBJ_42 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
@@ -118,7 +117,6 @@
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* QiitaAPIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIKit.swift; sourceTree = "<group>"; };
 		"QiitaAPIKit::QiitaAPIKit::Product" /* QiitaAPIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QiitaAPIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"QiitaAPIKit::QiitaAPIKitTests::Product" /* QiitaAPIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = QiitaAPIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -259,7 +257,6 @@
 				BF4F390A2352414100661971 /* ArticleStockersRequest.swift */,
 				BF2592D42326AA770064F498 /* Error.swift */,
 				BFE50748237E406F005B3AE2 /* HttpMethod.swift */,
-				OBJ_9 /* QiitaAPIKit.swift */,
 				BF4418DE23680B410084C71F /* RequestType.swift */,
 				BFD28CEC234A35690040604C /* Tag.swift */,
 				BFD28CEE234A369E0040604C /* TagRequest.swift */,
@@ -484,7 +481,6 @@
 				BF646804237E431100ADD18F /* AccessToken.swift in Sources */,
 				BF4418E1236831550084C71F /* ArticleStockers.swift in Sources */,
 				BF2592D1232687C90064F498 /* Article.swift in Sources */,
-				OBJ_23 /* QiitaAPIKit.swift in Sources */,
 				BF2592D3232688E60064F498 /* ArticleRequest.swift in Sources */,
 				BF4F390B2352414100661971 /* ArticleStockersRequest.swift in Sources */,
 				BF4F3909235240F500661971 /* User.swift in Sources */,
